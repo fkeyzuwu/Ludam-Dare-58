@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cy3n0dshugl5p"]
+
+[ext_resource type="Script" uid="uid://cujtnnjyrppuj" path="res://player.gd" id="1_nw3w6"]
+[ext_resource type="PackedScene" uid="uid://d30xmx8lo8vv8" path="res://hud.tscn" id="2_onrkg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4flbx"]
+albedo_color = Color(0.4392157, 1, 0.7607843, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ryuan"]
+material = SubResource("StandardMaterial3D_4flbx")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uulee"]
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("interaction_raycast", "hud")]
+collision_mask = 2
+script = ExtResource("1_nw3w6")
+mouse_sensitivity = 1.27
+interaction_raycast = NodePath("Camera3D/InteractionRaycast")
+hud = NodePath("HUD")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_ryuan")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_uulee")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.317641, 0)
+
+[node name="InteractionRaycast" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -3)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="HUD" parent="." instance=ExtResource("2_onrkg")]
