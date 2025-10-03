@@ -10,5 +10,7 @@ func can_interact() -> bool:
 	
 func interact(player: Player) -> void:
 	print("interacted")
+	player.inventory.add_item("Pussy")
+	print(player.inventory.items)
 	done = true
 	

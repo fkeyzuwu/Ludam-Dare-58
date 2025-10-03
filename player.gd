@@ -10,6 +10,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var camera: Camera3D = $Camera3D
 @export var interaction_raycast: RayCast3D
 @export var hud: HUD
+@export var inventory: PlayerInventory
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
