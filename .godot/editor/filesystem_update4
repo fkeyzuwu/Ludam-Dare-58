@@ -1,9 +1,0 @@
-res://world.tscn
-res://player.gd
-res://interactable.tscn
-res://player.tscn
-res://interactable.gd
-res://interaction_data.gd
-res://hud.gd
-res://hud.tscn
-res://interactable_test.gd
