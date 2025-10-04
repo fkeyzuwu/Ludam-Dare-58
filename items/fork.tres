@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://p0mdvbuy7fni"]
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://p0mdvbuy7fni"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_l2nc3"]
-[ext_resource type="PackedScene" uid="uid://qk8bcbyt004v" path="res://item_models/fork.tscn" id="2_f8joj"]
 
 [resource]
 script = ExtResource("1_l2nc3")
 item_name = "fork"
 description = "an italian man went to malta.."
-scene = ExtResource("2_f8joj")
+scene = "uid://qk8bcbyt004v"
 components = Array[ExtResource("1_l2nc3")]([])
 metadata/_custom_type_script = "uid://n5stvpcswml4"

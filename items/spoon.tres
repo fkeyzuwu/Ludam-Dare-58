@@ -1,11 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://coxcu4weaa77"]
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://coxcu4weaa77"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_cylh0"]
-[ext_resource type="PackedScene" uid="uid://tlg61rmch77f" path="res://item_models/spoon.tscn" id="2_6uvg5"]
 
 [resource]
 script = ExtResource("1_cylh0")
 item_name = "spoon"
-scene = ExtResource("2_6uvg5")
+scene = "uid://tlg61rmch77f"
 components = Array[ExtResource("1_cylh0")]([])
 metadata/_custom_type_script = "uid://n5stvpcswml4"

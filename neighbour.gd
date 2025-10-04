@@ -26,7 +26,8 @@ func hide_neighbour() -> void:
 func throw_garbage() -> void:
 	var garabge_item = data.throw_objects.pop_front() as Item
 	if garabge_item:
-		var garbage = garabge_item.scene.instantiate() as Garbage
+		var item_scene: PackedScene = load(garabge_item.scene)
+		var garbage = item_scene.instantiate() as Garbage
 		garbage_can.add_child(garbage)
 		garbage.global_position = garbage_can.drop_point.global_position
 
