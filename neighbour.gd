@@ -5,12 +5,14 @@ class_name Neighbour extends StaticBody3D
 @export var collision_shape: CollisionShape3D
 
 var garbage_can: GarbageCan
+var initial_interaction := false
 
 func _ready() -> void:
 	mesh_instance.mesh = data.mesh_data.mesh.duplicate(true)
 	mesh_instance.position.x = data.mesh_data.offset
 	mesh_instance.mesh.surface_get_material(0).albedo_color = data.color
 	
+	name = data.neighbour_name
 	hide_neighbour()
 	
 func show_neighbour() -> void:
@@ -33,14 +35,24 @@ func can_interact() -> bool:
 func interact(player: Player) -> void:
 	show_neighbour()
 	player.hud.hide_interaction_text()
-	if player.inventory.has(data.wanted_items.front()):
-		var item = data.wanted_items.pop_front()
-		player.inventory.remove(item)
-		var text = "wow! you got my " + item.name + ". \n the next item i want is + " + data.wanted_items.front().item_name
-		player.hud.dialogue_box.show_dialogue_box(data.neighbour_name, text)
+	
+	if not initial_interaction:
+		var dialogue_data = data.dialogues.front()
+		var dialogue = dialogue_data.initial_dialogue.duplicate()
+		player.hud.dialogue_box.show_dialogue_box(data.neighbour_name, dialogue)
+		initial_interaction = true
 	else:
-		var text = "you dont have what i want lil ni"
-		player.hud.dialogue_box.show_dialogue_box(data.neighbour_name, text)
+		if player.inventory.has(data.wanted_items.front()):
+			var item = data.wanted_items.pop_front()
+			player.inventory.remove(item)
+			var old_dialogue_data = data.dialogues.pop_front()
+			var new_dialogue_data = data.dialogues.front()
+			var dialogue = old_dialogue_data.accept_dialogue + new_dialogue_data.initial_dialogue
+			player.hud.dialogue_box.show_dialogue_box(data.neighbour_name, dialogue)
+		else:
+			var dialogue_data = data.dialogues.front()
+			var dialogue = dialogue_data.decline_dialogue.duplicate()
+			player.hud.dialogue_box.show_dialogue_box(data.neighbour_name, dialogue)
 		
 	await player.hud.dialogue_box.closed
 	hide_neighbour()

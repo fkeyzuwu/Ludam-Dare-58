@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://ctft518135wdm"]
+[gd_scene load_steps=16 format=3 uid="uid://ctft518135wdm"]
 
 [ext_resource type="PackedScene" uid="uid://u5t5oyvnpfha" path="res://neighbourhood.tscn" id="1_nh0kt"]
 [ext_resource type="Resource" uid="uid://k5qpmbo53gq6" path="res://neighbour_data/neighbour_mesh_data/santa.tres" id="2_l0kno"]
+[ext_resource type="Script" uid="uid://cqsko10jgjknc" path="res://neighbour_data/dialogue_data.gd" id="2_u382n"]
 [ext_resource type="Script" uid="uid://loqagcwsc03f" path="res://neighbour_data/neighbour_data.gd" id="3_d51nf"]
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="4_3kine"]
 [ext_resource type="Resource" uid="uid://c0h8krch4tldx" path="res://neighbour_data/neighbour_mesh_data/boy.tres" id="5_d51nf"]
@@ -12,25 +13,33 @@
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("2_l0kno")
 neighbour_name = "yakob"
+dialogues = null
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_3kine"]
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("5_d51nf")
 neighbour_name = "eric"
+dialogues = null
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_u382n"]
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("6_3kine")
 neighbour_name = "rimon"
+dialogues = null
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_nrjin"]
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("7_mqyhb")
 neighbour_name = "gerbilon"
+dialogues = null
 metadata/_custom_type_script = "uid://loqagcwsc03f"
+
+[sub_resource type="Resource" id="Resource_j0m8y"]
+script = ExtResource("2_u382n")
+metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
 [sub_resource type="Resource" id="Resource_l20bd"]
 script = ExtResource("4_3kine")
@@ -43,6 +52,7 @@ mesh_data = ExtResource("2_l0kno")
 neighbour_name = "chip"
 color = Color(0.36695582, 0.9122124, 0.9999998, 1)
 wanted_items = Array[ExtResource("4_3kine")]([SubResource("Resource_l20bd")])
+dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_j0m8y")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [node name="NeighbourhoodFull" type="Node3D"]
