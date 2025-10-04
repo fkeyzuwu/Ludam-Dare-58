@@ -1,4 +1,6 @@
-[gd_scene load_steps=14 format=4 uid="uid://cxy5gn63knqcs"]
+[gd_scene load_steps=15 format=4 uid="uid://cxy5gn63knqcs"]
+
+[ext_resource type="PackedScene" uid="uid://dcypt56wr45qu" path="res://garbage_can.tscn" id="1_hfkix"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33qr7"]
 resource_name = "Casa"
@@ -181,3 +183,6 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104473114, 1.8671722, -0.32606888)
 shape = SubResource("BoxShape3D_g5ubp")
+
+[node name="TrashCan" parent="." instance=ExtResource("1_hfkix")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.058376, -1.9279218, 1.9417763)

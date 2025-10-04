@@ -8,6 +8,7 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		var collider = collision.get_collider()
 		if collider is Player:
+			collider.kill()
 			collider.velocity = -collision.get_normal() * speed
 			collider.move_and_slide()
 		else:

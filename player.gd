@@ -11,6 +11,8 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export var interaction_raycast: RayCast3D
 @export var hud: HUD
 @export var inventory: PlayerInventory
+@onready var spawn_pos := global_position
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -61,3 +63,8 @@ func try_interact() -> void:
 				hud.hide_interaction_text()
 	else:
 		hud.hide_interaction_text()
+
+func kill() -> void:
+	global_position = spawn_pos
+	animation_player.play(&"respawn")
+	move_and_slide()
