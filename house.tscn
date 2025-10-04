@@ -160,9 +160,11 @@ shadow_mesh = SubResource("ArrayMesh_v8ytc")
 [sub_resource type="BoxShape3D" id="BoxShape3D_g5ubp"]
 size = Vector3(7.333824, 7.662384, 7.360216)
 
-[node name="House" type="StaticBody3D"]
+[node name="House" type="StaticBody3D" node_paths=PackedStringArray("garbage_can", "neighbour")]
 collision_layer = 2
 script = ExtResource("1_6syyc")
+garbage_can = NodePath("GarbageCan")
+neighbour = NodePath("Neighbour")
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(1.5250576e-08, 0, 0.967, 0, 1, 0, -0.202, 0, 7.300647e-08, 0, 0, -3.9323206)

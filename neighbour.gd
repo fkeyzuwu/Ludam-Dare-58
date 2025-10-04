@@ -9,7 +9,7 @@ var garbage_can: GarbageCan
 func _ready() -> void:
 	mesh_instance.mesh = data.mesh_data.mesh.duplicate(true)
 	mesh_instance.position.x = data.mesh_data.offset
-	mesh_instance.mesh.material.albedo_color = data.color
+	mesh_instance.mesh.surface_get_material(0).albedo_color = data.color
 	
 	hide_neighbour()
 	
