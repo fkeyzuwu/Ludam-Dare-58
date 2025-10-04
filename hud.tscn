@@ -48,11 +48,12 @@ script = ExtResource("2_64ctp")
 
 [node name="PersonNameLabel" type="Label" parent="DialogueBox"]
 layout_mode = 0
-offset_left = 22.9
-offset_top = 14.82
-offset_right = 92.4
-offset_bottom = 47.82
-theme_override_font_sizes/font_size = 20
+offset_left = 15.56
+offset_top = 18.56
+offset_right = 85.06
+offset_bottom = 51.559998
+rotation = -0.13962634
+theme_override_font_sizes/font_size = 17
 
 [node name="DialogueLabel" type="Label" parent="DialogueBox"]
 layout_mode = 1

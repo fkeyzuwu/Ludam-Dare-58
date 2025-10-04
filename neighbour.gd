@@ -27,12 +27,13 @@ func throw_garbage() -> void:
 	var garabge_item = data.throw_objects.pop_front() as Item
 	if garabge_item:
 		var item_scene: PackedScene = load(garabge_item.scene)
-		var garbage = item_scene.instantiate()
+		var garbage = item_scene.instantiate() as RigidBody3D
 		garbage_can.add_child(garbage)
 		var pos = garbage_can.drop_point.global_position
 		pos.x += randf_range(-0.3, 0.3)
 		pos.z += randf_range(-0.3, 0.3)
 		garbage.global_position = pos
+		garbage.rotation_degrees.y = randf_range(0, 360)
 
 func get_interaction_text() -> String:
 	return "Press 'E' to talk to " + data.neighbour_name
