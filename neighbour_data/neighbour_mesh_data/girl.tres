@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NeighbourMeshData" load_steps=3 format=3 uid="uid://c8ex3tht24utv"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5r1ssue816fr" path="res://models/low_poly_characters_pack/character_meshes/girl.tres" id="1_sx2nb"]
+[ext_resource type="Script" uid="uid://da47fggbsaib6" path="res://neighbour_data/neighbour_mesh_data.gd" id="2_c6ebi"]
+
+[resource]
+script = ExtResource("2_c6ebi")
+mesh = ExtResource("1_sx2nb")
+color = Color(1, 1, 1, 1)
+offset = -3.65
+metadata/_custom_type_script = "uid://da47fggbsaib6"

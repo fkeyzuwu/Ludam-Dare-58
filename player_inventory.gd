@@ -1,6 +1,6 @@
 class_name PlayerInventory extends Node
 
-var items: Array
+var items: Array[Item]
 
-func add_item(thing) -> void:
-	items.append(thing)
+func add_item(item: Item) -> void:
+	items.append(item)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctft518135wdm"]
+
+[ext_resource type="PackedScene" uid="uid://u5t5oyvnpfha" path="res://neighbourhood.tscn" id="1_nh0kt"]
+
+[node name="NeighbourhoodFull" type="Node3D"]
+
+[node name="Neighbourhood" parent="." instance=ExtResource("1_nh0kt")]
+
+[node name="Neighbourhood2" parent="." instance=ExtResource("1_nh0kt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34.707375)
+
+[node name="Neighbourhood3" parent="." instance=ExtResource("1_nh0kt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -69.41844)
+
+[editable path="Neighbourhood"]
+[editable path="Neighbourhood/House4"]

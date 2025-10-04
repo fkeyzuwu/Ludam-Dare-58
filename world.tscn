@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmhf2la6wg7dc" path="res://garbage.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dwed38g7s810u" path="res://garbage_truck.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bpn76cxsdd5b8" path="res://garbage_truck_reset_area.tscn" id="5_036b0"]
-[ext_resource type="PackedScene" uid="uid://u5t5oyvnpfha" path="res://neighbourhood.tscn" id="6_dwbse"]
+[ext_resource type="PackedScene" uid="uid://ctft518135wdm" path="res://neighbourhood_full.tscn" id="5_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pyc5x"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,8 +43,5 @@ transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.0
 [node name="GarbageTruckResetArea" parent="." instance=ExtResource("5_036b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.03736, 2.068019, 0)
 
-[node name="Neighbourhood" parent="." instance=ExtResource("6_dwbse")]
+[node name="NeighbourhoodFull" parent="." instance=ExtResource("5_dwbse")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
-
-[node name="Neighbourhood2" parent="." instance=ExtResource("6_dwbse")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.67823, 0, 0)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NeighbourMeshData" load_steps=3 format=3 uid="uid://k5qpmbo53gq6"]
+
+[ext_resource type="ArrayMesh" uid="uid://qx4g722omvyq" path="res://models/low_poly_characters_pack/character_meshes/santa.tres" id="1_bsnib"]
+[ext_resource type="Script" uid="uid://da47fggbsaib6" path="res://neighbour_data/neighbour_mesh_data.gd" id="2_etk3d"]
+
+[resource]
+script = ExtResource("2_etk3d")
+mesh = ExtResource("1_bsnib")
+color = Color(1, 1, 1, 1)
+offset = 3.65
+metadata/_custom_type_script = "uid://da47fggbsaib6"

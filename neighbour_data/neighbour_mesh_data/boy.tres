@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NeighbourMeshData" load_steps=3 format=3 uid="uid://c0h8krch4tldx"]
+
+[ext_resource type="Script" uid="uid://da47fggbsaib6" path="res://neighbour_data/neighbour_mesh_data.gd" id="1_5842t"]
+[ext_resource type="ArrayMesh" uid="uid://qx4g722omvyq" path="res://models/low_poly_characters_pack/character_meshes/santa.tres" id="1_cbky4"]
+
+[resource]
+script = ExtResource("1_5842t")
+mesh = ExtResource("1_cbky4")
+color = Color(1, 1, 1, 1)
+offset = -1.25
+metadata/_custom_type_script = "uid://da47fggbsaib6"
