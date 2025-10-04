@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dkc66j2ngb5oi"]
+[gd_scene load_steps=12 format=4 uid="uid://dkc66j2ngb5oi"]
 
 [ext_resource type="Script" uid="uid://dfek2p4il1se3" path="res://garbage.gd" id="1_7ds5h"]
 [ext_resource type="Texture2D" uid="uid://dl5sj353ee3y8" path="res://models/kitchen_tools_pack/textures/kitchen_baseColor.png" id="1_sjl4m"]
@@ -59,9 +59,11 @@ shadow_mesh = SubResource("ArrayMesh_k0q31")
 [sub_resource type="BoxShape3D" id="BoxShape3D_rgiy4"]
 size = Vector3(0.09590912, 0.023773193, 0.49978638)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_7ds5h"]
+
 [node name="Spork" type="RigidBody3D"]
-script = ExtResource("1_7ds5h")
-item = ExtResource("2_75dxl")
+collision_layer = 8
+collision_mask = 16
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0, 0, 0.011837482)
@@ -76,3 +78,12 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017738342, 0.0035247803, -0.025009155)
 shape = SubResource("BoxShape3D_rgiy4")
+
+[node name="InteractableGarbage" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_7ds5h")
+item = ExtResource("2_75dxl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableGarbage"]
+shape = SubResource("SphereShape3D_7ds5h")

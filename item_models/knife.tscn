@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://d2dlucwjoi8ss"]
+[gd_scene load_steps=11 format=4 uid="uid://d2dlucwjoi8ss"]
 
 [ext_resource type="Texture2D" uid="uid://dl5sj353ee3y8" path="res://models/kitchen_tools_pack/textures/kitchen_baseColor.png" id="1_gxwxi"]
 [ext_resource type="Texture2D" uid="uid://cno172ogjdl14" path="res://models/kitchen_tools_pack/textures/kitchen_emissive.png" id="2_kjsf2"]
 [ext_resource type="Texture2D" uid="uid://ddhljlrpbcgf8" path="res://models/kitchen_tools_pack/textures/kitchen_metallicRoughness.png" id="3_8sa8g"]
 [ext_resource type="Texture2D" uid="uid://by0a5ba8jyxve" path="res://models/kitchen_tools_pack/textures/kitchen_normal.png" id="4_bcaxx"]
+[ext_resource type="Script" uid="uid://dfek2p4il1se3" path="res://garbage.gd" id="5_8sa8g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ye8k"]
 resource_name = "kitchen"
@@ -57,7 +58,11 @@ shadow_mesh = SubResource("ArrayMesh_1yiq2")
 [sub_resource type="BoxShape3D" id="BoxShape3D_rgiy4"]
 size = Vector3(0.06699753, 0.015670776, 0.51564026)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_laniy"]
+
 [node name="Knife" type="RigidBody3D"]
+collision_layer = 8
+collision_mask = 16
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0, 0, 0.011837482)
@@ -73,3 +78,11 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012681961, -0.0005264282, -0.017082214)
 shape = SubResource("BoxShape3D_rgiy4")
+
+[node name="InteractableGarbage" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("5_8sa8g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableGarbage"]
+shape = SubResource("SphereShape3D_laniy")

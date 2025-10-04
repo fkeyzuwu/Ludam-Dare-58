@@ -1,4 +1,4 @@
-class_name Garbage extends RigidBody3D
+class_name Garbage extends Area3D
 
 @export var item: Item
 
@@ -10,5 +10,4 @@ func can_interact() -> bool:
 	
 func interact(player: Player) -> void:
 	player.inventory.add_item(item)
-	queue_free()
-	
+	get_parent().queue_free()
