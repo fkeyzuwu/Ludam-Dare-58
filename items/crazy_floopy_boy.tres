@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://du6ha4lg7ohs2"]
+
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_sujhf"]
+[ext_resource type="Resource" uid="uid://0i5bgl34b2wl" path="res://items/lizard.tres" id="2_kl3xs"]
+[ext_resource type="Resource" uid="uid://bm3vkljqwehm5" path="res://items/cool_hat.tres" id="3_gsq0u"]
+
+[resource]
+script = ExtResource("1_sujhf")
+item_name = "the crazy floopy boy 2000!!"
+description = "yeah thats a lizard with a hat. let him cook."
+components = Array[ExtResource("1_sujhf")]([ExtResource("2_kl3xs"), ExtResource("3_gsq0u")])
+metadata/_custom_type_script = "uid://n5stvpcswml4"

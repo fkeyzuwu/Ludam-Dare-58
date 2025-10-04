@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://0i5bgl34b2wl"]
+
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_wo4ms"]
+
+[resource]
+script = ExtResource("1_wo4ms")
+item_name = "lizard"
+description = "just a cool lil' fellar"
+components = Array[ExtResource("1_wo4ms")]([])
+metadata/_custom_type_script = "uid://n5stvpcswml4"
