@@ -1,4 +1,4 @@
-extends AnimatableBody3D
+class_name GarbageTruck extends AnimatableBody3D
 
 @export var speed: float
 @onready var spawn_pos = global_position
@@ -14,4 +14,4 @@ func _physics_process(delta: float) -> void:
 			push_error("WINO WINO PLAYER NOT COLLIDEER SPOTTED IN GARABEG TRUCK")
 	
 func reset_to_start_position() -> void:
-	global_position = spawn_pos
+	set_deferred(&"global_position", spawn_pos)

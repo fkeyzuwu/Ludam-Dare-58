@@ -64,4 +64,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4778278, 0)
 transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, 12.13851, 5.784172, 6.106888)
 
 [node name="GarbageTruckResetArea" parent="." instance=ExtResource("5_036b0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.03736, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.03736, 2.068019, 0)

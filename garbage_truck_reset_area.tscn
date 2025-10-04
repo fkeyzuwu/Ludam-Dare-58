@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpn76cxsdd5b8"]
+[gd_scene load_steps=3 format=3 uid="uid://bpn76cxsdd5b8"]
+
+[ext_resource type="Script" uid="uid://e0fmlaplltvo" path="res://garbage_truck_reset_area.gd" id="1_2nfew"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_liy4f"]
 size = Vector3(3, 3, 40)
 
 [node name="GarbageTruckResetArea" type="Area3D"]
+collision_layer = 64
+collision_mask = 32
+script = ExtResource("1_2nfew")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_liy4f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -69,6 +69,7 @@ interact={
 3d_physics/layer_4="Garbage"
 3d_physics/layer_5="GarbageCan"
 3d_physics/layer_6="GarbageTruck"
+3d_physics/layer_7="GarbageTruckResetArea"
 
 [physics]
 
