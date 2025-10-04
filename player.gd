@@ -16,9 +16,19 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	hud.dialogue_box.opened.connect(_on_dialogue_box_opened)
+	hud.dialogue_box.closed.connect(_on_dialogue_box_closed)
+
+var in_dialogue := false
+
+func _on_dialogue_box_opened() -> void:
+	in_dialogue = true
+	
+func _on_dialogue_box_closed() -> void:
+	in_dialogue = false
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and not in_dialogue:
 		var delta = get_process_delta_time()
 		global_rotation.y -= event.relative.x * delta * mouse_sensitivity
 		camera.global_rotation.x -= event.relative.y * delta * mouse_sensitivity
@@ -34,12 +44,12 @@ func move(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not in_dialogue:
 		velocity.y = JUMP_VELOCITY
 
 	var input_dir := Input.get_vector("left", "right", "forward", "back")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
+	if direction and not in_dialogue:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
@@ -49,20 +59,24 @@ func move(delta: float) -> void:
 	move_and_slide()
 
 func try_interact() -> void:
-	if interaction_raycast.is_colliding():
-		var interactable = interaction_raycast.get_collider()
-		if not interactable:
-			hud.hide_interaction_text()
-		else:
-			if interactable.can_interact():
-				if Input.is_action_just_pressed(&"interact"):
-					await interactable.interact(self)
-				else:
-					hud.show_interaction_text(interactable.get_interaction_text())
-			else:
+	if not in_dialogue:
+		if interaction_raycast.is_colliding():
+			var interactable = interaction_raycast.get_collider()
+			if not interactable:
 				hud.hide_interaction_text()
+			else:
+				if interactable.can_interact():
+					if Input.is_action_just_pressed(&"interact"):
+						await interactable.interact(self)
+					else:
+						hud.show_interaction_text(interactable.get_interaction_text())
+				else:
+					hud.hide_interaction_text()
+		else:
+			hud.hide_interaction_text()
 	else:
-		hud.hide_interaction_text()
+		if Input.is_action_just_pressed(&"interact"):
+			hud.dialogue_box.continue_dialogue()
 
 func kill() -> void:
 	global_position = spawn_pos

@@ -18,7 +18,7 @@ wanted_items = Array[ExtResource("4_6fkhn")]([SubResource("Resource_b63ib")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hsk1u"]
-size = Vector3(1.365, 2.487, 1.074)
+size = Vector3(1.365, 2.487, 1.136121)
 
 [node name="Neighbour" type="StaticBody3D" node_paths=PackedStringArray("mesh_instance", "collision_shape")]
 collision_layer = 132
@@ -32,5 +32,5 @@ transform = Transform3D(0.12, 0, 0, 0, -5.2453664e-09, 0.12, 0, -0.12, -5.245366
 mesh = ExtResource("2_burpp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2905273, -0.09098673)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2905273, -0.05992621)
 shape = SubResource("BoxShape3D_hsk1u")
