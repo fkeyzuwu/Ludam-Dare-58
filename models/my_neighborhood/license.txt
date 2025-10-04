@@ -1,0 +1,11 @@
+Model Information:
+* title:	My Neighborhood
+* source:	https://sketchfab.com/3d-models/my-neighborhood-eceed2da151043c384228182d824321d
+* author:	alek (https://sketchfab.com/mat.ferro04)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "My Neighborhood" (https://sketchfab.com/3d-models/my-neighborhood-eceed2da151043c384228182d824321d) by alek (https://sketchfab.com/mat.ferro04) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
