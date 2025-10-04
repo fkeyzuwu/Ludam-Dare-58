@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://dkc66j2ngb5oi"]
+[gd_scene load_steps=11 format=4 uid="uid://dkc66j2ngb5oi"]
 
+[ext_resource type="Script" uid="uid://dfek2p4il1se3" path="res://garbage.gd" id="1_7ds5h"]
 [ext_resource type="Texture2D" uid="uid://dl5sj353ee3y8" path="res://models/kitchen_tools_pack/textures/kitchen_baseColor.png" id="1_sjl4m"]
 [ext_resource type="Texture2D" uid="uid://cno172ogjdl14" path="res://models/kitchen_tools_pack/textures/kitchen_emissive.png" id="2_5ox01"]
+[ext_resource type="Resource" uid="uid://xad5h0c524fm" path="res://items/spork.tres" id="2_75dxl"]
 [ext_resource type="Texture2D" uid="uid://ddhljlrpbcgf8" path="res://models/kitchen_tools_pack/textures/kitchen_metallicRoughness.png" id="3_7ds5h"]
 [ext_resource type="Texture2D" uid="uid://by0a5ba8jyxve" path="res://models/kitchen_tools_pack/textures/kitchen_normal.png" id="4_75dxl"]
 
@@ -58,6 +60,8 @@ shadow_mesh = SubResource("ArrayMesh_k0q31")
 size = Vector3(0.09590912, 0.023773193, 0.49978638)
 
 [node name="Spork" type="RigidBody3D"]
+script = ExtResource("1_7ds5h")
+item = ExtResource("2_75dxl")
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0, 0, 0.011837482)

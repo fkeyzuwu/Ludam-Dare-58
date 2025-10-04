@@ -14,6 +14,8 @@ func _ready() -> void:
 	
 	name = data.neighbour_name
 	hide_neighbour()
+	await get_tree().process_frame
+	throw_garbage()
 	
 func show_neighbour() -> void:
 	mesh_instance.visible = true
@@ -22,9 +24,11 @@ func hide_neighbour() -> void:
 	mesh_instance.visible = false
 	
 func throw_garbage() -> void:
-	var garabge_item = data.throw_objects.pop_front()
-	var garbage = garabge_item.scene.instantiate() as Garbage
-	garbage.global_position = garbage_can.drop_point
+	var garabge_item = data.throw_objects.pop_front() as Item
+	if garabge_item:
+		var garbage = garabge_item.scene.instantiate() as Garbage
+		garbage_can.add_child(garbage)
+		garbage.global_position = garbage_can.drop_point.global_position
 
 func get_interaction_text() -> String:
 	return "Press 'E' to talk to " + data.neighbour_name

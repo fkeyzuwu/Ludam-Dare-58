@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://qk8bcbyt004v"]
+[gd_scene load_steps=10 format=4 uid="uid://qk8bcbyt004v"]
 
+[ext_resource type="Script" uid="uid://dfek2p4il1se3" path="res://garbage.gd" id="1_pgp8w"]
 [ext_resource type="Texture2D" uid="uid://cmmdemynjkj4p" path="res://models/fork_low_poly/textures/DefaultMaterial_baseColor.png" id="1_usoju"]
 [ext_resource type="Texture2D" uid="uid://8xdh2rsyundb" path="res://models/fork_low_poly/textures/DefaultMaterial_metallicRoughness.png" id="2_al7w5"]
+[ext_resource type="Resource" uid="uid://p0mdvbuy7fni" path="res://items/fork.tres" id="2_yfmfo"]
 [ext_resource type="Texture2D" uid="uid://cqbjlldsxh361" path="res://models/fork_low_poly/textures/DefaultMaterial_normal.png" id="3_mwxyi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cftbp"]
@@ -53,9 +55,11 @@ shadow_mesh = SubResource("ArrayMesh_t7xqd")
 [sub_resource type="BoxShape3D" id="BoxShape3D_usoju"]
 size = Vector3(0.75694823, 0.035461426, 0.08444214)
 
-[node name="RigidBody3D" type="RigidBody3D"]
+[node name="Fork" type="RigidBody3D"]
 collision_layer = 8
 collision_mask = 0
+script = ExtResource("1_pgp8w")
+item = ExtResource("2_yfmfo")
 
 [node name="ForkModel" type="Node3D" parent="."]
 transform = Transform3D(0.155, 0, 0, 0, 0.155, 0, 0, 0, 0.148, 0, 0, 0)
