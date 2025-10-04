@@ -1,5 +1,5 @@
 @abstract
-class_name Interactable extends Area3D
+class_name Interactable extends CollisionObject3D
 
 @abstract
 func get_interaction_text() -> String

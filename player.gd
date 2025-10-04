@@ -14,6 +14,8 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	var garbage_truck = get_tree().get_first_node_in_group("garbage_truck")
+	
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -48,7 +50,7 @@ func move(delta: float) -> void:
 
 func try_interact() -> void:
 	if interaction_raycast.is_colliding():
-		var interactable = interaction_raycast.get_collider() as Interactable
+		var interactable = interaction_raycast.get_collider()
 		if not interactable:
 			push_error("COLLISION" + interactable + "IS NOT INTERACTABLE")
 			hud.set_interaction_text("")
