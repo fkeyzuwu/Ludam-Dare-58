@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctft518135wdm"]
+[gd_scene load_steps=20 format=3 uid="uid://ctft518135wdm"]
 
 [ext_resource type="PackedScene" uid="uid://u5t5oyvnpfha" path="res://neighbourhood.tscn" id="1_nh0kt"]
 [ext_resource type="Resource" uid="uid://k5qpmbo53gq6" path="res://neighbour_data/neighbour_mesh_data/santa.tres" id="2_l0kno"]
@@ -7,13 +7,19 @@
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="4_3kine"]
 [ext_resource type="Resource" uid="uid://c0h8krch4tldx" path="res://neighbour_data/neighbour_mesh_data/boy.tres" id="5_d51nf"]
 [ext_resource type="Resource" uid="uid://c8ex3tht24utv" path="res://neighbour_data/neighbour_mesh_data/girl.tres" id="6_3kine"]
+[ext_resource type="Resource" uid="uid://coxcu4weaa77" path="res://items/spoon.tres" id="6_nrjin"]
 [ext_resource type="Resource" uid="uid://bl12nxbnfkm4j" path="res://neighbour_data/neighbour_mesh_data/black_beard.tres" id="7_mqyhb"]
+
+[sub_resource type="Resource" id="Resource_4dhjd"]
+script = ExtResource("2_u382n")
+metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
 [sub_resource type="Resource" id="Resource_mqyhb"]
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("2_l0kno")
 neighbour_name = "yakob"
-dialogues = null
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("6_nrjin")])
+dialogues = Array[Object]([SubResource("Resource_4dhjd")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_3kine"]
@@ -34,7 +40,7 @@ metadata/_custom_type_script = "uid://loqagcwsc03f"
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("7_mqyhb")
 neighbour_name = "gerbilon"
-dialogues = null
+dialogues = Array[Object]([])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_j0m8y"]

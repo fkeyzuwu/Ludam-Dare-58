@@ -7,6 +7,6 @@
 [resource]
 script = ExtResource("1_sujhf")
 item_name = "the crazy floopy boy 2000!!"
-description = "yeah thats a lizard with a hat. let him cook."
+description = "yeah thats a lizard with a hat. "
 components = Array[ExtResource("1_sujhf")]([ExtResource("2_kl3xs"), ExtResource("3_gsq0u")])
 metadata/_custom_type_script = "uid://n5stvpcswml4"
