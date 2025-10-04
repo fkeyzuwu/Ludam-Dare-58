@@ -56,7 +56,7 @@ func try_interact() -> void:
 		else:
 			if interactable.can_interact():
 				if Input.is_action_just_pressed(&"interact"):
-					interactable.interact(self)
+					await interactable.interact(self)
 				else:
 					hud.show_interaction_text(interactable.get_interaction_text())
 			else:

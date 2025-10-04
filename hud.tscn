@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://d30xmx8lo8vv8"]
+[gd_scene load_steps=4 format=3 uid="uid://d30xmx8lo8vv8"]
 
 [ext_resource type="Script" uid="uid://jqpsit2wgunv" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="Script" uid="uid://f7iht74cxv8t" path="res://dialogue_box.gd" id="2_64ctp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sq4i"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.6568171, 0.6111613, 0.2476075, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 5
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -10,6 +29,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_37p78")
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -372.5
+offset_top = -247.0
+offset_right = 379.5
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8sq4i")
+script = ExtResource("2_64ctp")
+
+[node name="DialogueLabel" type="Label" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
 
 [node name="InteractionLabel" type="Label" parent="."]
 layout_mode = 1

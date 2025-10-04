@@ -6,6 +6,5 @@
 [resource]
 script = ExtResource("2_3e6v6")
 mesh = ExtResource("1_tg1bl")
-color = Color(1, 1, 1, 1)
 offset = 1.25
 metadata/_custom_type_script = "uid://da47fggbsaib6"

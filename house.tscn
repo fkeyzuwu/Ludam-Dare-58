@@ -193,4 +193,4 @@ shape = SubResource("BoxShape3D_g5ubp")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.058376, -1.9279218, 1.9417763)
 
 [node name="Neighbour" parent="." instance=ExtResource("2_metfq")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.198906, -1.8410101, -0.14697587)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.6034613, -1.8410101, -0.39885065)
