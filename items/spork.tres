@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://xad5h0c524fm"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://xad5h0c524fm"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_y52sj"]
 [ext_resource type="Resource" uid="uid://coxcu4weaa77" path="res://items/spoon.tres" id="2_te752"]
 [ext_resource type="Resource" uid="uid://p0mdvbuy7fni" path="res://items/fork.tres" id="3_pdid7"]
+[ext_resource type="Texture2D" uid="uid://bljhs1ebtcgn2" path="res://screenshots/spork.png" id="4_pdid7"]
 
 [resource]
 script = ExtResource("1_y52sj")
@@ -10,4 +11,5 @@ item_name = "spork"
 description = "oh damn this shit sporking!"
 scene = "uid://dkc66j2ngb5oi"
 components = Array[ExtResource("1_y52sj")]([ExtResource("2_te752"), ExtResource("3_pdid7")])
+item_picture = ExtResource("4_pdid7")
 metadata/_custom_type_script = "uid://n5stvpcswml4"

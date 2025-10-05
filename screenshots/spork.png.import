@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl71ly4sgctmv"
-path="res://.godot/imported/fork.png-c9ca17a7978750f5e734c633780f4367.ctex"
+uid="uid://bljhs1ebtcgn2"
+path="res://.godot/imported/spork.png-613193a18c978048e8933b4190fa5d60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screenshots/fork.png"
-dest_files=["res://.godot/imported/fork.png-c9ca17a7978750f5e734c633780f4367.ctex"]
+source_file="res://screenshots/spork.png"
+dest_files=["res://.godot/imported/spork.png-613193a18c978048e8933b4190fa5d60.ctex"]
 
 [params]
 

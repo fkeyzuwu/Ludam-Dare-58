@@ -55,7 +55,7 @@ func interact(player: Player) -> void:
 			var item = data.wanted_items.pop_front()
 			player.inventory.remove(item)
 			var old_dialogue_data = data.dialogues.pop_front()
-			var new_dialogue_data = not data.dialogues.is_empty() if data.dialogues.front() else null
+			var new_dialogue_data = data.dialogues.front() if not data.dialogues.is_empty() else null
 			var dialogue = old_dialogue_data.accept_dialogue
 			if new_dialogue_data:
 				dialogue += new_dialogue_data.initial_dialogue

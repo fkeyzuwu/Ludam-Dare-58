@@ -10,7 +10,7 @@ func add_item(item: Item) -> void:
 	items.append(item)
 	var inventory_item = INVENTORY_ITEM.instantiate() as InventoryItem
 	inventory_item.item = item
-	inventory_item.texture = ICON # TODO: = item.item_picture once we have pictures
+	inventory_item.texture = ICON if not item.item_picture else item.item_picture # TODO: = item.item_picture once we have pictures
 	add_child(inventory_item)
 	inventory_item.inventory_item_pressed.connect(_on_inventory_item_pressed)
 

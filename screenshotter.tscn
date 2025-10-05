@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dchvj4wpkwjmb"]
+[gd_scene load_steps=7 format=3 uid="uid://dchvj4wpkwjmb"]
 
 [ext_resource type="PackedScene" uid="uid://qk8bcbyt004v" path="res://item_models/fork.tscn" id="1_nqhr1"]
 [ext_resource type="Script" uid="uid://wl6br4juib6b" path="res://screenshotter.gd" id="1_ujgu1"]
+[ext_resource type="PackedScene" uid="uid://tlg61rmch77f" path="res://item_models/spoon.tscn" id="2_xo1tx"]
+[ext_resource type="PackedScene" uid="uid://dkc66j2ngb5oi" path="res://item_models/spork.tscn" id="4_4hex6"]
+[ext_resource type="PackedScene" uid="uid://bpx5ivovmpo1e" path="res://item_models/chainsaw.tscn" id="5_djx17"]
 
 [sub_resource type="Environment" id="Environment_nqhr1"]
 
@@ -10,8 +13,22 @@ script = ExtResource("1_ujgu1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
-[node name="Fork" parent="." instance=ExtResource("1_nqhr1")]
-transform = Transform3D(0.32114717, -0.07783946, 0.94382495, 0.94357574, 0.11133339, -0.31188044, -0.080802746, 0.99073, 0.10920174, 0, 0.05231899, -0.6275588)
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Spoon" parent="Objects" instance=ExtResource("2_xo1tx")]
+transform = Transform3D(0.9417112, -0.13519016, 0.30806437, 0.30121776, -0.06898809, -0.95105654, 0.14982626, 0.988415, -0.02424518, 0, 0, -0.388)
+visible = false
+
+[node name="Fork" parent="Objects" instance=ExtResource("1_nqhr1")]
+transform = Transform3D(0.32114717, -0.07783946, 0.94382495, 0.94357574, 0.11133339, -0.31188044, -0.080802746, 0.99073, 0.10920174, 0, 0.05231899, -0.543)
+visible = false
+
+[node name="Spork" parent="Objects" instance=ExtResource("4_4hex6")]
+transform = Transform3D(0.9786377, 0.15645298, -0.1333823, -0.11824152, -0.10242402, -0.98768836, -0.16818833, 0.9823603, -0.08173676, 0, -0.055, -0.38)
+visible = false
+
+[node name="Chainsaw" parent="Objects" instance=ExtResource("5_djx17")]
+transform = Transform3D(-0.70496845, 0.063659534, 0.7063761, -0.012025636, 0.99474794, -0.10164967, -0.70913684, -0.080154404, -0.70050025, 0.642, -0.195, -1.705)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4167392, 0)

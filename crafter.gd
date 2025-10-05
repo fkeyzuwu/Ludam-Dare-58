@@ -44,7 +44,6 @@ func push_inventory_item(inventory_item: InventoryItem) -> void:
 func return_inventory_item(inventory_item: InventoryItem) -> void:
 	inventory_items.erase(inventory_item)
 	inventory_item.reparent(inventory_container)
-	print("return to inventory")
 	craft_button.disabled = true
 	inventory_item.in_crafting = false
 

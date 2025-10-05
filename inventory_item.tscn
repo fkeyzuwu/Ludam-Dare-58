@@ -4,9 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://nt6arbrxkqk1" path="res://icon.svg" id="1_gmchj"]
 
 [node name="InventoryItem" type="TextureRect"]
+custom_minimum_size = Vector2(128, 128)
 offset_right = 128.0
 offset_bottom = 128.0
 texture = ExtResource("1_gmchj")
+expand_mode = 2
+stretch_mode = 4
 script = ExtResource("1_5b765")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

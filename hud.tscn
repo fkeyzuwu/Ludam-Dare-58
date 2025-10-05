@@ -34,7 +34,7 @@ mouse_filter = 1
 script = ExtResource("1_37p78")
 crafter = NodePath("Crafter")
 
-[node name="DialogueBox" type="Panel" parent="."]
+[node name="DialogueBox" type="Panel" parent="." node_paths=PackedStringArray("screen_blocker")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -50,6 +50,7 @@ grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8sq4i")
 script = ExtResource("2_64ctp")
+screen_blocker = NodePath("../ScreenBlocker")
 
 [node name="PersonNameLabel" type="Label" parent="DialogueBox"]
 layout_mode = 0
@@ -120,3 +121,13 @@ offset_left = -264.5
 offset_top = -165.17
 offset_right = 264.5
 offset_bottom = 57.23517
+
+[node name="ScreenBlocker" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)

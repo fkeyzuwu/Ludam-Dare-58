@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://v5f63ef2cct6"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://v5f63ef2cct6"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_1j3ue"]
 [ext_resource type="Resource" uid="uid://bpgsvivcoeu27" path="res://items/chain.tres" id="2_wn4f6"]
 [ext_resource type="Resource" uid="uid://s5mfujuxjqhs" path="res://items/saw.tres" id="3_rinyk"]
+[ext_resource type="Texture2D" uid="uid://cko8h8ytexg0j" path="res://screenshots/chainsaw.png" id="4_rinyk"]
 
 [resource]
 script = ExtResource("1_1j3ue")
@@ -10,4 +11,5 @@ item_name = "chainsaw"
 description = "can probably cut stuff with it"
 scene = "uid://bpx5ivovmpo1e"
 components = Array[ExtResource("1_1j3ue")]([ExtResource("2_wn4f6"), ExtResource("3_rinyk")])
+item_picture = ExtResource("4_rinyk")
 metadata/_custom_type_script = "uid://n5stvpcswml4"
