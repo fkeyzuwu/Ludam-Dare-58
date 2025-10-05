@@ -33,6 +33,8 @@ func _input(event: InputEvent) -> void:
 		global_rotation.y -= event.relative.x * delta * mouse_sensitivity
 		camera.global_rotation.x -= event.relative.y * delta * mouse_sensitivity
 		camera.global_rotation_degrees.x = clampf(camera.global_rotation_degrees.x, -85, 85)
+	elif event.is_action_pressed(&"craft"):
+		inventory.craft_item(inventory.items)
 	elif event.is_action_pressed("quit"):
 		get_tree().quit()
 
