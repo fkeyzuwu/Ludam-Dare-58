@@ -23,6 +23,7 @@ var in_dialogue := false
 
 func _on_dialogue_box_opened() -> void:
 	in_dialogue = true
+	hud.hide_interaction_text()
 	
 func _on_dialogue_box_closed() -> void:
 	in_dialogue = false
@@ -35,6 +36,8 @@ func _input(event: InputEvent) -> void:
 		camera.global_rotation_degrees.x = clampf(camera.global_rotation_degrees.x, -85, 85)
 	elif event.is_action_pressed(&"craft"):
 		inventory.craft_item(inventory.items)
+	elif event.is_action_pressed(&"change_mouse_mode"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED else Input.MOUSE_MODE_CAPTURED
 	elif event.is_action_pressed("quit"):
 		get_tree().quit()
 

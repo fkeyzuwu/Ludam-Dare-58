@@ -32,7 +32,7 @@ collision_mask = 18
 mouse_sensitivity = 0.27
 
 [node name="GarbageTruck" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, 12.13851, 5.784172, 0.38072824)
+transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, -24.865007, 5.784172, 0.38072824)
 
 [node name="GarbageTruckResetArea" parent="." instance=ExtResource("5_036b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.03736, 2.068019, 0)

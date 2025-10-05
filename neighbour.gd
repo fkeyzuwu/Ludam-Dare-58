@@ -14,7 +14,7 @@ func _ready() -> void:
 	
 	name = data.neighbour_name
 	hide_neighbour()
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	throw_garbage()
 	
 func show_neighbour() -> void:
@@ -56,7 +56,9 @@ func interact(player: Player) -> void:
 			player.inventory.remove(item)
 			var old_dialogue_data = data.dialogues.pop_front()
 			var new_dialogue_data = data.dialogues.front()
-			var dialogue = old_dialogue_data.accept_dialogue + new_dialogue_data.initial_dialogue
+			var dialogue = old_dialogue_data.accept_dialogue
+			if new_dialogue_data:
+				dialogue += new_dialogue_data.initial_dialogue
 			player.hud.dialogue_box.show_dialogue_box(data.neighbour_name, dialogue)
 		else:
 			var dialogue_data = data.dialogues.front()

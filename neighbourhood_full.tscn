@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ctft518135wdm"]
+[gd_scene load_steps=24 format=3 uid="uid://ctft518135wdm"]
 
 [ext_resource type="PackedScene" uid="uid://u5t5oyvnpfha" path="res://neighbourhood.tscn" id="1_nh0kt"]
 [ext_resource type="Resource" uid="uid://k5qpmbo53gq6" path="res://neighbour_data/neighbour_mesh_data/santa.tres" id="2_l0kno"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://bl12nxbnfkm4j" path="res://neighbour_data/neighbour_mesh_data/black_beard.tres" id="7_mqyhb"]
 [ext_resource type="Resource" uid="uid://p0mdvbuy7fni" path="res://items/fork.tres" id="7_puw7g"]
 [ext_resource type="Resource" uid="uid://xad5h0c524fm" path="res://items/spork.tres" id="9_l20bd"]
+[ext_resource type="Resource" uid="uid://bvtrn6u1nb6ue" path="res://items/knife.tres" id="11_j0m8y"]
 
 [sub_resource type="Resource" id="Resource_mqyhb"]
 script = ExtResource("3_d51nf")
@@ -35,12 +36,19 @@ accept_dialogue = Array[String](["OMG!", "thanks for the sporky lil man! :)"])
 decline_dialogue = Array[String](["this isn't my desired kitchen utensil..", "..lil hoe"])
 metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
+[sub_resource type="Resource" id="Resource_7avjl"]
+script = ExtResource("2_u382n")
+initial_dialogue = Array[String](["can you get me that knife? to kill people and shit"])
+accept_dialogue = Array[String](["i love knife!"])
+decline_dialogue = Array[String](["knifing is my speciality."])
+metadata/_custom_type_script = "uid://cqsko10jgjknc"
+
 [sub_resource type="Resource" id="Resource_u382n"]
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("6_3kine")
 neighbour_name = "rimon"
-wanted_items = Array[ExtResource("4_3kine")]([ExtResource("9_l20bd")])
-dialogues = Array[Object]([SubResource("Resource_4dhjd")])
+wanted_items = Array[ExtResource("4_3kine")]([ExtResource("9_l20bd"), ExtResource("11_j0m8y")])
+dialogues = Array[Object]([SubResource("Resource_4dhjd"), SubResource("Resource_7avjl")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_nrjin"]

@@ -9,5 +9,8 @@ func can_interact() -> bool:
 	return true
 	
 func interact(player: Player) -> void:
-	player.inventory.add_item(item)
-	get_parent().queue_free()
+	if player.inventory.items.size() < player.inventory.MAX_INVENTORY_SIZE:
+		player.inventory.add_item(item)
+		get_parent().queue_free()
+	else:
+		player.hud.dialogue_box.show_dialogue_box("tumi", ["i can't carry this many items... im smol boi ;-;"])
