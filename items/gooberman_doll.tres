@@ -8,5 +8,6 @@
 script = ExtResource("1_2wvaj")
 item_name = "gooberman plushie"
 description = "um.. that looks like what he wanted i think"
+scene = "uid://bin4f84hjgi1n"
 components = Array[ExtResource("1_2wvaj")]([ExtResource("2_44ffa"), ExtResource("3_27hs5")])
 metadata/_custom_type_script = "uid://n5stvpcswml4"

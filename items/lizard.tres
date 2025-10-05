@@ -6,5 +6,6 @@
 script = ExtResource("1_wo4ms")
 item_name = "lizard"
 description = "just a cool lil' fellar"
+scene = "uid://bb01dujp1xdsp"
 components = Array[ExtResource("1_wo4ms")]([])
 metadata/_custom_type_script = "uid://n5stvpcswml4"

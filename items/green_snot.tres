@@ -6,5 +6,6 @@
 script = ExtResource("1_k1ds6")
 item_name = "green_snot"
 description = "..ew"
+scene = "uid://byb37lw1osec2"
 components = Array[ExtResource("1_k1ds6")]([])
 metadata/_custom_type_script = "uid://n5stvpcswml4"

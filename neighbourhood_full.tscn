@@ -108,6 +108,7 @@ metadata/_custom_type_script = "uid://cqsko10jgjknc"
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("5_d51nf")
 neighbour_name = "arnon"
+color = Color(0.38852394, 0.9999997, 0.72572654, 1)
 throw_objects = Array[ExtResource("4_3kine")]([ExtResource("16_xtvop")])
 wanted_items = Array[ExtResource("4_3kine")]([ExtResource("16_56he3")])
 dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_4rqn0")])

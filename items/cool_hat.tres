@@ -6,5 +6,6 @@
 script = ExtResource("1_34ipj")
 item_name = "cool_hat"
 description = "it has colors and it blocks the sun from making you hot i think"
+scene = "uid://dcgisiakkybcb"
 components = Array[ExtResource("1_34ipj")]([])
 metadata/_custom_type_script = "uid://n5stvpcswml4"
