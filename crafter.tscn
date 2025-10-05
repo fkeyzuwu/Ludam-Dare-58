@@ -1,14 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://chpo7w8qryu17"]
+[gd_scene load_steps=11 format=3 uid="uid://chpo7w8qryu17"]
 
 [ext_resource type="Script" uid="uid://dmjal3883swwk" path="res://crafter.gd" id="1_5pxk1"]
+[ext_resource type="Texture2D" uid="uid://cedpr6oub5b8e" path="res://icons8-plus-24.png" id="2_dsfm1"]
 
-[sub_resource type="Gradient" id="Gradient_8sq4i"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 1)
+[sub_resource type="Gradient" id="Gradient_dsfm1"]
+offsets = PackedFloat32Array(0.026578072, 0.9302326, 1)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 0, 0.70926285, 0.70926285, 0.70926285, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_640wx"]
-gradient = SubResource("Gradient_8sq4i")
-fill_from = Vector2(0, 1)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2q6md"]
+gradient = SubResource("Gradient_dsfm1")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i86ai"]
+texture = SubResource("GradientTexture2D_2q6md")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640wx"]
 content_margin_left = 4.0
@@ -101,7 +106,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
 script = ExtResource("1_5pxk1")
-item_slots = [NodePath("HBoxContainer/Item1"), NodePath("HBoxContainer/Item2")]
+item_slots = [NodePath("HBoxContainer/ItemSlot1"), NodePath("HBoxContainer/ItemSlot2")]
 
 [node name="IncorrectComboLabel" type="Label" parent="."]
 layout_mode = 2
@@ -115,20 +120,20 @@ size_flags_vertical = 3
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Item1" type="TextureRect" parent="HBoxContainer"]
+[node name="ItemSlot1" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture = SubResource("GradientTexture2D_640wx")
-expand_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i86ai")
 
 [node name="Plus" type="TextureRect" parent="HBoxContainer"]
 layout_mode = 2
-texture = SubResource("GradientTexture2D_640wx")
+texture = ExtResource("2_dsfm1")
 expand_mode = 2
 
-[node name="Item2" type="TextureRect" parent="HBoxContainer"]
+[node name="ItemSlot2" type="PanelContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture = SubResource("GradientTexture2D_640wx")
-expand_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_i86ai")
 
 [node name="CraftButton" type="Button" parent="."]
 layout_mode = 2
