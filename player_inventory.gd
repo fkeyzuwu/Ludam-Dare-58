@@ -33,10 +33,20 @@ func remove(item: Item) -> void:
 	inventory_container.remove_item(item)
 
 func craft_item(components: Array[Item]) -> void:
+	var components2 = components.duplicate()
+	components2.reverse()
+	
 	if item_recipies.has(components):
 		var new_item = item_recipies[components] as Item
 		dialogue_box.show_dialogue_box("tuni", [new_item.description])
 		for component in components.duplicate():
+			remove(component)
+			
+		add_item(new_item)
+	elif item_recipies.has(components2):
+		var new_item = item_recipies[components2] as Item
+		dialogue_box.show_dialogue_box("tuni", [new_item.description])
+		for component in components2.duplicate():
 			remove(component)
 			
 		add_item(new_item)

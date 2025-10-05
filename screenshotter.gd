@@ -5,10 +5,13 @@ extends Node3D
 func _ready() -> void:
 	var main_window = get_window()
 	main_window.size = Vector2i(512, 512)
+	get_viewport().transparent_bg = true
 	
 	for child: RigidBody3D in objects.get_children():
 		child.freeze = true
 		child.visible = false
+	
+	await RenderingServer.frame_post_draw
 	
 	for child: RigidBody3D in objects.get_children():
 		child.visible = true
