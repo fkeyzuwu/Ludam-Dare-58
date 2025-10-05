@@ -116,9 +116,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34.707375)
 [node name="Neighbour" parent="Neighbourhood2/House4" index="3"]
 data = SubResource("Resource_550dc")
 
-[node name="Neighbourhood3" parent="." instance=ExtResource("1_nh0kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -69.41844)
-
 [editable path="Neighbourhood"]
 [editable path="Neighbourhood/House4"]
 [editable path="Neighbourhood/House5"]
@@ -133,10 +130,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -69.41844)
 [editable path="Neighbourhood2/House7"]
 [editable path="Neighbourhood2/House8"]
 [editable path="Neighbourhood2/House9"]
-[editable path="Neighbourhood3"]
-[editable path="Neighbourhood3/House4"]
-[editable path="Neighbourhood3/House5"]
-[editable path="Neighbourhood3/House6"]
-[editable path="Neighbourhood3/House7"]
-[editable path="Neighbourhood3/House8"]
-[editable path="Neighbourhood3/House9"]
