@@ -28,7 +28,6 @@ enum State {
 var state := State.Idle
 
 func enter_state(_state: State) -> void:
-	
 	match _state:
 		State.Idle:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -37,7 +36,7 @@ func enter_state(_state: State) -> void:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		State.Crafting:
 			hud.hide_interaction_text()
-			hud.show_inventory_crafting()
+			hud.crafter.show_crafter()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		
 	state = _state

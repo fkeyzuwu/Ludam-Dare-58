@@ -4,6 +4,7 @@ var items: Array[Item]
 @onready var player: Player = get_parent()
 @onready var dialogue_box: DialogueBox = player.hud.dialogue_box
 @onready var inventory_container: InventoryConatiner = player.hud.inventory_container
+@onready var crafter: Crafter = player.hud.crafter
 
 var item_recipies: Dictionary
 const ITEM_DIR = "res://items/"
@@ -17,7 +18,7 @@ func _ready() -> void:
 	
 	for file in files:
 		var item: Item = load(ITEM_DIR + file)
-		if item.components.size() >= 0:
+		if item.components.size() > 0:
 			item_recipies[item.components] = item
 
 func add_item(item: Item) -> void:
@@ -40,4 +41,4 @@ func craft_item(components: Array[Item]) -> void:
 			
 		add_item(new_item)
 	else:
-		print("boooo")
+		crafter.show_incorrect_recipie_text()
