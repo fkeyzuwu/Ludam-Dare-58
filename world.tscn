@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://lsv5og7im76d"]
+[gd_scene load_steps=7 format=3 uid="uid://lsv5og7im76d"]
 
 [ext_resource type="PackedScene" uid="uid://cy3n0dshugl5p" path="res://player.tscn" id="1_l6kn1"]
 [ext_resource type="PackedScene" uid="uid://dwed38g7s810u" path="res://garbage_truck.tscn" id="4_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://bpn76cxsdd5b8" path="res://garbage_truck_reset_area.tscn" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://ctft518135wdm" path="res://neighbourhood_full.tscn" id="5_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pyc5x"]
@@ -32,10 +31,7 @@ collision_mask = 18
 mouse_sensitivity = 0.27
 
 [node name="GarbageTruck" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, -24.865007, 5.784172, 0.38072824)
-
-[node name="GarbageTruckResetArea" parent="." instance=ExtResource("5_036b0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.03736, 2.068019, 0)
+transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, 148.11876, 5.784172, 0.38072824)
 
 [node name="NeighbourhoodFull" parent="." instance=ExtResource("5_dwbse")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)

@@ -16,3 +16,6 @@ func _physics_process(delta: float) -> void:
 	
 func reset_to_start_position() -> void:
 	set_deferred(&"global_position", spawn_pos)
+
+func _on_timer_timeout() -> void:
+	reset_to_start_position()
