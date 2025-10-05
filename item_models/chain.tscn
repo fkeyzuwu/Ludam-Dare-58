@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://bpgsvivcoeu27" path="res://items/chain.tres" id="5_1dg6m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_usoju"]
-size = Vector3(0.75694823, 0.035461426, 0.08444214)
+size = Vector3(1.527494, 0.107925415, 0.1236496)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74gct"]
 resource_name = "Material"
@@ -56,7 +56,7 @@ collision_layer = 8
 collision_mask = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006183982, -0.0030822754, -0.001663208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09253466, 0.03314972, -1.1444092e-05)
 shape = SubResource("BoxShape3D_usoju")
 
 [node name="ChainModel" type="MeshInstance3D" parent="."]

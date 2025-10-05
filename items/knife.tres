@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://bvtrn6u1nb6ue"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bvtrn6u1nb6ue"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_5a80o"]
+[ext_resource type="Texture2D" uid="uid://clxdh3ca2afwq" path="res://screenshots/knife.png" id="2_q5u4v"]
 
 [resource]
 script = ExtResource("1_5a80o")
 item_name = "knife"
 scene = "uid://d2dlucwjoi8ss"
-components = Array[ExtResource("1_5a80o")]([])
+item_picture = ExtResource("2_q5u4v")
 metadata/_custom_type_script = "uid://n5stvpcswml4"

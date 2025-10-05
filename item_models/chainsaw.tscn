@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bpx5ivovmpo1e"]
+[gd_scene load_steps=23 format=4 uid="uid://bpx5ivovmpo1e"]
 
 [ext_resource type="Texture2D" uid="uid://dkcpk70ydjn1r" path="res://models/animated_chainsaw_low-poly_free-download/textures/chainsaw.001_baseColor.jpeg" id="4_cm3qs"]
 [ext_resource type="Script" uid="uid://dfek2p4il1se3" path="res://garbage.gd" id="4_qtmd1"]
@@ -196,7 +196,10 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_usoju"]
-size = Vector3(0.75694823, 0.035461426, 0.08444214)
+size = Vector3(0.72210205, 0.8526993, 0.97753096)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_41g1a"]
+size = Vector3(0.08116852, 0.27921033, 1.293823)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cm3qs"]
 radius = 0.8
@@ -240,8 +243,12 @@ blend_shapes/morph_5 = 0.0
 blend_shapes/morph_6 = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006183982, -0.0030822754, -0.001663208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.023607075, 0.2532692, 0.21163869)
 shape = SubResource("BoxShape3D_usoju")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19759181, 0.06305587, -0.86552083)
+shape = SubResource("BoxShape3D_41g1a")
 
 [node name="InteractableGarbage" type="Area3D" parent="."]
 collision_layer = 4

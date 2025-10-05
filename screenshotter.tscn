@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dchvj4wpkwjmb"]
+[gd_scene load_steps=8 format=3 uid="uid://dchvj4wpkwjmb"]
 
 [ext_resource type="PackedScene" uid="uid://qk8bcbyt004v" path="res://item_models/fork.tscn" id="1_nqhr1"]
 [ext_resource type="Script" uid="uid://wl6br4juib6b" path="res://screenshotter.gd" id="1_ujgu1"]
 [ext_resource type="PackedScene" uid="uid://tlg61rmch77f" path="res://item_models/spoon.tscn" id="2_xo1tx"]
 [ext_resource type="PackedScene" uid="uid://dkc66j2ngb5oi" path="res://item_models/spork.tscn" id="4_4hex6"]
 [ext_resource type="PackedScene" uid="uid://bpx5ivovmpo1e" path="res://item_models/chainsaw.tscn" id="5_djx17"]
+[ext_resource type="PackedScene" uid="uid://d2dlucwjoi8ss" path="res://item_models/knife.tscn" id="6_sxedo"]
 
 [sub_resource type="Environment" id="Environment_nqhr1"]
 
@@ -29,6 +30,10 @@ visible = false
 
 [node name="Chainsaw" parent="Objects" instance=ExtResource("5_djx17")]
 transform = Transform3D(-0.70496845, 0.063659534, 0.7063761, -0.012025636, 0.99474794, -0.10164967, -0.70913684, -0.080154404, -0.70050025, 0.642, -0.195, -1.705)
+visible = false
+
+[node name="Knife" parent="Objects" instance=ExtResource("6_sxedo")]
+transform = Transform3D(0.97237366, 0.21115944, -0.099504545, -0.07077637, -0.13950786, -0.98768836, -0.22244138, 0.9674448, -0.12070866, 0, -0.04, -0.409)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4167392, 0)
