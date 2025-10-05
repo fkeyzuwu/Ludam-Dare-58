@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dchvj4wpkwjmb"]
+
+[ext_resource type="PackedScene" uid="uid://qk8bcbyt004v" path="res://item_models/fork.tscn" id="1_nqhr1"]
+[ext_resource type="Script" uid="uid://wl6br4juib6b" path="res://screenshotter.gd" id="1_ujgu1"]
+
+[sub_resource type="Environment" id="Environment_nqhr1"]
+
+[node name="Screenshotter" type="Node3D"]
+script = ExtResource("1_ujgu1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Fork" parent="." instance=ExtResource("1_nqhr1")]
+transform = Transform3D(0.32114717, -0.07783946, 0.94382495, 0.94357574, 0.11133339, -0.31188044, -0.080802746, 0.99073, 0.10920174, 0, 0.05231899, -0.6275588)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4167392, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nqhr1")
