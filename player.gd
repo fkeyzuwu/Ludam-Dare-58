@@ -27,7 +27,15 @@ enum State {
 
 var state := State.Idle
 
+func _exit_current_state() -> void:
+	match state:
+		State.Crafting:
+			hud.crafter.return_crafting_slots()
+			hud.crafter.hide_crafter()
+
 func enter_state(_state: State) -> void:
+	_exit_current_state()
+	
 	match _state:
 		State.Idle:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -53,8 +61,11 @@ func _input(event: InputEvent) -> void:
 		global_rotation.y -= event.relative.x * delta * mouse_sensitivity
 		camera.global_rotation.x -= event.relative.y * delta * mouse_sensitivity
 		camera.global_rotation_degrees.x = clampf(camera.global_rotation_degrees.x, -85, 85)
-	elif event.is_action_pressed(&"craft") and state == State.Idle:
-		enter_state(State.Crafting) #inventory.craft_item(inventory.items)
+	elif event.is_action_pressed(&"craft"):
+		if state == State.Idle:
+			enter_state(State.Crafting)
+		elif state == State.Crafting:
+			enter_state(State.Idle)
 	elif event.is_action_pressed(&"change_mouse_mode"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED else Input.MOUSE_MODE_CAPTURED
 	elif event.is_action_pressed("quit"):
