@@ -22,8 +22,8 @@ func remove_item(item: Item) -> void:
 			return
 
 func _on_inventory_item_pressed(inventory_item: InventoryItem) -> void:
-	if crafter.inventory_items.size() < 2:
-		if not inventory_item.in_crafting:
+	if not inventory_item.in_crafting:
+		if crafter.inventory_items.size() < 2:
 			crafter.push_inventory_item(inventory_item)
-		else:
-			crafter.return_inventory_item(inventory_item)
+	else:
+		crafter.return_inventory_item(inventory_item)
