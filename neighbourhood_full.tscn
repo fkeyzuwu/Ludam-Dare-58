@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ctft518135wdm"]
+[gd_scene load_steps=46 format=3 uid="uid://ctft518135wdm"]
 
 [ext_resource type="PackedScene" uid="uid://u5t5oyvnpfha" path="res://neighbourhood.tscn" id="1_nh0kt"]
 [ext_resource type="Resource" uid="uid://k5qpmbo53gq6" path="res://neighbour_data/neighbour_mesh_data/santa.tres" id="2_l0kno"]
@@ -18,7 +18,14 @@
 [ext_resource type="PackedScene" uid="uid://du0qiun2r16ii" path="res://ground.tscn" id="13_550dc"]
 [ext_resource type="PackedScene" uid="uid://clrh3ocbmgoc1" path="res://tree.tscn" id="14_4dhjd"]
 [ext_resource type="Resource" uid="uid://toker6x6j5wa" path="res://items/gooberman_doll.tres" id="16_56he3"]
+[ext_resource type="Resource" uid="uid://cj8ne57cqnpcm" path="res://items/veggies.tres" id="16_jv46b"]
 [ext_resource type="Resource" uid="uid://bm3vkljqwehm5" path="res://items/cool_hat.tres" id="16_xtvop"]
+[ext_resource type="Resource" uid="uid://cylb43r3xhyuy" path="res://items/milk.tres" id="18_uwghr"]
+[ext_resource type="Resource" uid="uid://cxb6lxnewdh22" path="res://items/coffee_beans.tres" id="19_sncd0"]
+[ext_resource type="Resource" uid="uid://bweqyxqrooojk" path="res://items/coffee.tres" id="19_tekib"]
+[ext_resource type="Resource" uid="uid://paobmcdsredo" path="res://items/water_bottle.tres" id="20_doayu"]
+[ext_resource type="Resource" uid="uid://cjg53frxpektv" path="res://items/green_snot.tres" id="21_sxko6"]
+[ext_resource type="Resource" uid="uid://d0rxbv7x6l1g" path="res://items/soup.tres" id="22_nqpej"]
 
 [sub_resource type="Resource" id="Resource_mqyhb"]
 script = ExtResource("3_d51nf")
@@ -32,7 +39,7 @@ metadata/_custom_type_script = "uid://loqagcwsc03f"
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("5_d51nf")
 neighbour_name = "eric"
-throw_objects = Array[ExtResource("4_3kine")]([ExtResource("7_puw7g")])
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("7_puw7g"), ExtResource("13_4dhjd")])
 dialogues = null
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
@@ -75,9 +82,20 @@ wanted_items = Array[ExtResource("4_3kine")]([ExtResource("13_7avjl")])
 dialogues = Array[Object]([SubResource("Resource_tekib")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
-[sub_resource type="Resource" id="Resource_j0m8y"]
+[sub_resource type="Resource" id="Resource_sxko6"]
 script = ExtResource("2_u382n")
+initial_dialogue = Array[String](["mewo"])
+accept_dialogue = Array[String](["mewo mewo!! :3"])
+decline_dialogue = Array[String](["mewo :("])
 metadata/_custom_type_script = "uid://cqsko10jgjknc"
+
+[sub_resource type="Resource" id="Resource_jv46b"]
+script = ExtResource("3_d51nf")
+mesh_data = ExtResource("6_3kine")
+neighbour_name = "havatzelet"
+wanted_items = Array[ExtResource("4_3kine")]([ExtResource("13_4dhjd")])
+dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_sxko6")])
+metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_puw7g"]
 script = ExtResource("3_d51nf")
@@ -85,23 +103,15 @@ mesh_data = ExtResource("2_l0kno")
 neighbour_name = "chip"
 color = Color(0.36695582, 0.9122124, 0.9999998, 1)
 throw_objects = Array[ExtResource("4_3kine")]([ExtResource("13_4dhjd")])
-wanted_items = Array[ExtResource("4_3kine")]([null])
-dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_j0m8y")])
+dialogues = Array[ExtResource("2_u382n")]([])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
-
-[sub_resource type="Resource" id="Resource_mjpm7"]
-script = ExtResource("2_u382n")
-initial_dialogue = Array[String](["ayo, you got that gagaga?"])
-accept_dialogue = Array[String](["thanks for getting my gagaga!"])
-decline_dialogue = Array[String](["this ain't no gagaga retard."])
-metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
 [sub_resource type="Resource" id="Resource_550dc"]
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("6_3kine")
 neighbour_name = "yalda"
-wanted_items = Array[ExtResource("4_3kine")]([null])
-dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_mjpm7")])
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("16_jv46b")])
+dialogues = Array[ExtResource("2_u382n")]([])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [sub_resource type="Resource" id="Resource_4rqn0"]
@@ -121,6 +131,14 @@ wanted_items = Array[ExtResource("4_3kine")]([ExtResource("16_56he3")])
 dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_4rqn0")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
+[sub_resource type="Resource" id="Resource_nqpej"]
+script = ExtResource("3_d51nf")
+mesh_data = ExtResource("6_3kine")
+neighbour_name = "jasmin"
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("18_uwghr")])
+dialogues = Array[Object]([])
+metadata/_custom_type_script = "uid://loqagcwsc03f"
+
 [sub_resource type="Resource" id="Resource_uwghr"]
 script = ExtResource("2_u382n")
 initial_dialogue = Array[String](["Oh hi! Hehe", "Any chance you can find me some coffee?"])
@@ -132,8 +150,34 @@ metadata/_custom_type_script = "uid://cqsko10jgjknc"
 script = ExtResource("3_d51nf")
 mesh_data = ExtResource("2_l0kno")
 neighbour_name = "seryozha"
-wanted_items = Array[ExtResource("4_3kine")]([null])
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("20_doayu")])
+wanted_items = Array[ExtResource("4_3kine")]([ExtResource("19_tekib")])
 dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_uwghr")])
+metadata/_custom_type_script = "uid://loqagcwsc03f"
+
+[sub_resource type="Resource" id="Resource_doayu"]
+script = ExtResource("3_d51nf")
+mesh_data = ExtResource("5_d51nf")
+neighbour_name = "finneas"
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("19_sncd0")])
+dialogues = Array[ExtResource("2_u382n")]([])
+metadata/_custom_type_script = "uid://loqagcwsc03f"
+
+[sub_resource type="Resource" id="Resource_khd7c"]
+script = ExtResource("2_u382n")
+initial_dialogue = Array[String](["oh man.. i don't feel so well.", "any chance you have something to help me out?"])
+accept_dialogue = Array[String](["oh! that is pretty hot and soupy.", "gracias little possum man!"])
+decline_dialogue = Array[String](["umm.. this doesn't seem like it would help."])
+metadata/_custom_type_script = "uid://cqsko10jgjknc"
+
+[sub_resource type="Resource" id="Resource_w35yl"]
+script = ExtResource("3_d51nf")
+mesh_data = ExtResource("7_mqyhb")
+neighbour_name = "raniyon"
+color = Color(0.74014187, 0.8389529, 0.7207779, 1)
+throw_objects = Array[ExtResource("4_3kine")]([ExtResource("21_sxko6")])
+wanted_items = Array[ExtResource("4_3kine")]([ExtResource("22_nqpej")])
+dialogues = Array[ExtResource("2_u382n")]([SubResource("Resource_khd7c")])
 metadata/_custom_type_script = "uid://loqagcwsc03f"
 
 [node name="NeighbourhoodFull" type="Node3D"]
@@ -155,6 +199,9 @@ data = SubResource("Resource_u382n")
 [node name="Neighbour" parent="Neighbourhood/House7" index="3"]
 data = SubResource("Resource_nrjin")
 
+[node name="Neighbour" parent="Neighbourhood/House8" index="3"]
+data = SubResource("Resource_jv46b")
+
 [node name="Neighbour" parent="Neighbourhood/House9" index="3"]
 data = SubResource("Resource_puw7g")
 
@@ -167,11 +214,20 @@ data = SubResource("Resource_550dc")
 [node name="Neighbour" parent="Neighbourhood2/House5" index="3"]
 data = SubResource("Resource_xtvop")
 
+[node name="Neighbour" parent="Neighbourhood2/House6" index="3"]
+data = SubResource("Resource_nqpej")
+
 [node name="Neighbour" parent="Neighbourhood2/House7" index="3"]
 data = SubResource("Resource_sncd0")
 
 [node name="MeshInstance3D" parent="Neighbourhood2/House7/Neighbour" index="0"]
 transform = Transform3D(0.12, 0, 0, 0, -5.2453664e-09, 0.12, 0, -0.12, -5.2453664e-09, 2.144247, 0.19993067, 0)
+
+[node name="Neighbour" parent="Neighbourhood2/House8" index="3"]
+data = SubResource("Resource_doayu")
+
+[node name="Neighbour" parent="Neighbourhood2/House9" index="3"]
+data = SubResource("Resource_w35yl")
 
 [node name="Ground" parent="." instance=ExtResource("13_550dc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 34.708492)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d0rxbv7x6l1g"]
+
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_gggl5"]
+[ext_resource type="Texture2D" uid="uid://cofiywqvbgfy3" path="res://screenshots/soup.png" id="2_gggl5"]
+
+[resource]
+script = ExtResource("1_gggl5")
+item_name = "soup"
+description = "ohh! i love soup :)"
+item_picture = ExtResource("2_gggl5")
+metadata/_custom_type_script = "uid://n5stvpcswml4"

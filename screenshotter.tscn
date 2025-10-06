@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dchvj4wpkwjmb"]
+[gd_scene load_steps=22 format=3 uid="uid://dchvj4wpkwjmb"]
 
 [ext_resource type="PackedScene" uid="uid://qk8bcbyt004v" path="res://item_models/fork.tscn" id="1_nqhr1"]
 [ext_resource type="Script" uid="uid://wl6br4juib6b" path="res://screenshotter.gd" id="1_ujgu1"]
@@ -17,6 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://xrvjnbxpwixq" path="res://item_models/milk.tscn" id="15_4nmg1"]
 [ext_resource type="PackedScene" uid="uid://d4jl2f5vuxaiq" path="res://item_models/coffee.tscn" id="16_c4l5r"]
 [ext_resource type="PackedScene" uid="uid://dww3dlqdv6krn" path="res://item_models/coffee_beans.tscn" id="17_fmejw"]
+[ext_resource type="PackedScene" uid="uid://cuppsok1f3ag3" path="res://item_models/water_bottle.tscn" id="18_fmejw"]
+[ext_resource type="PackedScene" uid="uid://dldsx06k41le0" path="res://item_models/veggies.tscn" id="19_3rmwd"]
+[ext_resource type="PackedScene" uid="uid://k82g3xqf7ueq" path="res://item_models/soup.tscn" id="20_s2i3u"]
 
 [sub_resource type="Environment" id="Environment_nqhr1"]
 
@@ -161,6 +164,18 @@ visible = false
 
 [node name="CoffeeBeans" parent="Objects" instance=ExtResource("17_fmejw")]
 transform = Transform3D(0.8910065, 0.035619687, -0.452591, 0, 0.9969173, 0.0784591, 0.45399052, -0.06990757, 0.8882598, -0.075, -0.413, -0.8582189)
+visible = false
+
+[node name="WaterBottle" parent="Objects" instance=ExtResource("18_fmejw")]
+transform = Transform3D(0.9688724, 0.08440952, -0.23272574, -0.067805625, 0.99460876, 0.0784591, 0.23809376, -0.060236745, 0.9693724, 0, -0.565, -0.966)
+visible = false
+
+[node name="Veggies" parent="Objects" instance=ExtResource("19_3rmwd")]
+transform = Transform3D(0.98795986, 0.1547104, 0, -0.13191229, 0.84237427, -0.52249855, -0.08083596, 0.5162076, 0.85264015, 0.005, -0.462, -1.376)
+visible = false
+
+[node name="Soup" parent="Objects" instance=ExtResource("20_s2i3u")]
+transform = Transform3D(1, 0, 0, 0, 0.9723699, -0.23344538, 0, 0.23344538, 0.9723699, 0, -0.425, -0.89)
 visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

@@ -1,0 +1,8 @@
+Model Information:
+* title:	Low-poly Veges
+* source:	https://sketchfab.com/3d-models/low-poly-veges-788b7bd0b9044dfc988aae64d1ab5e5a
+* author:	Chellew (https://sketchfab.com/chellewwxy)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

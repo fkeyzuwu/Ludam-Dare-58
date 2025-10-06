@@ -31,3 +31,5 @@ func _ready() -> void:
 			print("Error saving thumbnail: " + str(error))
 		
 		child.visible = false
+		
+	get_tree().quit()
