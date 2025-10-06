@@ -7,17 +7,12 @@ var items: Array[Item]
 @onready var crafter: Crafter = player.hud.crafter
 
 var item_recipies: Dictionary
-const ITEM_DIR = "res://items/"
+@export_file("*.tres") var item_file_paths: Array[String]
 const MAX_INVENTORY_SIZE = 10
 
 func _ready() -> void:
-	var files = DirAccess.get_files_at(ITEM_DIR)
-	for i in range(files.size() - 1, -1, -1):
-		if files[i].ends_with(".uid"):
-			files.remove_at(i)
-	
-	for file in files:
-		var item: Item = load(ITEM_DIR + file)
+	for file in item_file_paths:
+		var item: Item = load(file)
 		if item.components.size() > 0:
 			item_recipies[item.components] = item
 

@@ -93,6 +93,7 @@ color = Color(1, 1, 1, 0)
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("3_i3pqv")
+item_file_paths = Array[String](["uid://bpgsvivcoeu27", "uid://v5f63ef2cct6", "uid://bweqyxqrooojk", "uid://cxb6lxnewdh22", "uid://bm3vkljqwehm5", "uid://du6ha4lg7ohs2", "uid://p0mdvbuy7fni", "uid://toker6x6j5wa", "uid://cjg53frxpektv", "uid://bvtrn6u1nb6ue", "uid://0i5bgl34b2wl", "uid://cylb43r3xhyuy", "uid://s5mfujuxjqhs", "uid://d0rxbv7x6l1g", "uid://coxcu4weaa77", "uid://xad5h0c524fm", "uid://b2wel3gq4wlme", "uid://cj8ne57cqnpcm", "uid://paobmcdsredo", "uid://dca81swwm50w1"])
 
 [node name="FootstepTimer" type="Timer" parent="."]
 wait_time = 0.5
