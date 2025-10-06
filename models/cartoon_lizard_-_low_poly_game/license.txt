@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cartoon Lizard - Low Poly Game
+* source:	https://sketchfab.com/3d-models/cartoon-lizard-low-poly-game-e45e5e07a86d4e159acf3007da95d614
+* author:	Theo Kain (https://sketchfab.com/TheoKain)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cartoon Lizard - Low Poly Game" (https://sketchfab.com/3d-models/cartoon-lizard-low-poly-game-e45e5e07a86d4e159acf3007da95d614) by Theo Kain (https://sketchfab.com/TheoKain) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

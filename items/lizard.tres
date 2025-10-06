@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://0i5bgl34b2wl"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://0i5bgl34b2wl"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_wo4ms"]
+[ext_resource type="Texture2D" uid="uid://bfv72qp1rcchm" path="res://screenshots/lizard.png" id="2_cn6hm"]
 
 [resource]
 script = ExtResource("1_wo4ms")
 item_name = "lizard"
 description = "just a cool lil' fellar"
 scene = "uid://bb01dujp1xdsp"
-components = Array[ExtResource("1_wo4ms")]([])
+item_picture = ExtResource("2_cn6hm")
 metadata/_custom_type_script = "uid://n5stvpcswml4"

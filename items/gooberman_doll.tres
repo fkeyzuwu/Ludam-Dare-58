@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://toker6x6j5wa"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://toker6x6j5wa"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_2wvaj"]
 [ext_resource type="Resource" uid="uid://cjg53frxpektv" path="res://items/green_snot.tres" id="2_44ffa"]
 [ext_resource type="Resource" uid="uid://dca81swwm50w1" path="res://items/yarn.tres" id="3_27hs5"]
+[ext_resource type="Texture2D" uid="uid://cv5hsr6oolhkn" path="res://screenshots/gooberman_doll.png" id="4_1vokc"]
 
 [resource]
 script = ExtResource("1_2wvaj")
@@ -10,4 +11,5 @@ item_name = "gooberman plushie"
 description = "um.. that looks like what he wanted i think"
 scene = "uid://bin4f84hjgi1n"
 components = Array[ExtResource("1_2wvaj")]([ExtResource("2_44ffa"), ExtResource("3_27hs5")])
+item_picture = ExtResource("4_1vokc")
 metadata/_custom_type_script = "uid://n5stvpcswml4"

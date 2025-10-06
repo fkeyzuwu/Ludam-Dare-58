@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://du6ha4lg7ohs2"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://du6ha4lg7ohs2"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_sujhf"]
 [ext_resource type="Resource" uid="uid://0i5bgl34b2wl" path="res://items/lizard.tres" id="2_kl3xs"]
 [ext_resource type="Resource" uid="uid://bm3vkljqwehm5" path="res://items/cool_hat.tres" id="3_gsq0u"]
+[ext_resource type="Texture2D" uid="uid://ck0l48fucsfui" path="res://screenshots/crazy_floopy_boy.png" id="4_pyoxs"]
 
 [resource]
 script = ExtResource("1_sujhf")
@@ -10,4 +11,5 @@ item_name = "the crazy floopy boy 2000!!"
 description = "yeah thats a lizard with a hat. "
 scene = "uid://drgq0ylox5i5t"
 components = Array[ExtResource("1_sujhf")]([ExtResource("2_kl3xs"), ExtResource("3_gsq0u")])
+item_picture = ExtResource("4_pyoxs")
 metadata/_custom_type_script = "uid://n5stvpcswml4"
