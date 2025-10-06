@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://bweqyxqrooojk"]
+
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_u831w"]
+[ext_resource type="Resource" uid="uid://cylb43r3xhyuy" path="res://items/milk.tres" id="2_i2qiw"]
+[ext_resource type="Resource" uid="uid://cxb6lxnewdh22" path="res://items/coffee_beans.tres" id="3_i2qiw"]
+[ext_resource type="Texture2D" uid="uid://by14o1bu6indq" path="res://screenshots/coffee.png" id="4_i2qiw"]
+
+[resource]
+script = ExtResource("1_u831w")
+item_name = "coffee"
+description = "Oh hehe! i know someone who'd like this"
+components = Array[ExtResource("1_u831w")]([ExtResource("2_i2qiw"), ExtResource("3_i2qiw")])
+item_picture = ExtResource("4_i2qiw")
+metadata/_custom_type_script = "uid://n5stvpcswml4"

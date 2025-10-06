@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dchvj4wpkwjmb"]
+[gd_scene load_steps=19 format=3 uid="uid://dchvj4wpkwjmb"]
 
 [ext_resource type="PackedScene" uid="uid://qk8bcbyt004v" path="res://item_models/fork.tscn" id="1_nqhr1"]
 [ext_resource type="Script" uid="uid://wl6br4juib6b" path="res://screenshotter.gd" id="1_ujgu1"]
@@ -12,6 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://drgq0ylox5i5t" path="res://item_models/crazy_floopy_boy.tscn" id="9_mrwgb"]
 [ext_resource type="PackedScene" uid="uid://bb4on0a7u5nq1" path="res://item_models/chain.tscn" id="11_iblgk"]
 [ext_resource type="PackedScene" uid="uid://ctebk6ls2hct0" path="res://item_models/saw.tscn" id="12_e8b65"]
+[ext_resource type="PackedScene" uid="uid://bm2t271qk1qaa" path="res://item_models/yarn.tscn" id="13_0vwwa"]
+[ext_resource type="PackedScene" uid="uid://byb37lw1osec2" path="res://item_models/green_snot.tscn" id="13_e8b65"]
+[ext_resource type="PackedScene" uid="uid://xrvjnbxpwixq" path="res://item_models/milk.tscn" id="15_4nmg1"]
+[ext_resource type="PackedScene" uid="uid://d4jl2f5vuxaiq" path="res://item_models/coffee.tscn" id="16_c4l5r"]
+[ext_resource type="PackedScene" uid="uid://dww3dlqdv6krn" path="res://item_models/coffee_beans.tscn" id="17_fmejw"]
 
 [sub_resource type="Environment" id="Environment_nqhr1"]
 
@@ -136,6 +141,26 @@ visible = false
 
 [node name="Saw" parent="Objects" instance=ExtResource("12_e8b65")]
 transform = Transform3D(-0.5513334, 0.09303285, 0.82908165, -0.82320076, -0.22211646, -0.52249855, 0.13554314, -0.9705716, 0.19904494, -0.285, 0.115, -1.866)
+visible = false
+
+[node name="Yarn" parent="Objects" instance=ExtResource("13_0vwwa")]
+transform = Transform3D(0.599674, -0.256385, 0.7580619, 0.30640915, 0.9486609, 0.0784591, -0.7392595, 0.1852272, 0.647446, 0.09, -0.272, -0.749)
+visible = false
+
+[node name="GreenSnot" parent="Objects" instance=ExtResource("13_e8b65")]
+transform = Transform3D(0.85264015, -0.08173679, -0.5160657, 0, 0.98768836, -0.15643448, 0.52249855, 0.13338232, 0.84214276, 0, -0.24, -0.735)
+visible = false
+
+[node name="Milk" parent="Objects" instance=ExtResource("15_4nmg1")]
+transform = Transform3D(0.76040596, 0.028328525, -0.64882994, 0, 0.99904823, 0.043619387, 0.64944804, -0.033168443, 0.75968224, 0.016, -0.559, -1.197)
+visible = false
+
+[node name="Coffee" parent="Objects" instance=ExtResource("16_c4l5r")]
+transform = Transform3D(0.9969173, 0.0784591, 0, -0.05095511, 0.647446, -0.76040596, -0.059660766, 0.7580619, 0.64944804, 0, -0.111, -0.841)
+visible = false
+
+[node name="CoffeeBeans" parent="Objects" instance=ExtResource("17_fmejw")]
+transform = Transform3D(0.8910065, 0.035619687, -0.452591, 0, 0.9969173, 0.0784591, 0.45399052, -0.06990757, 0.8882598, -0.075, -0.413, -0.8582189)
 visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

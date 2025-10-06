@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dca81swwm50w1"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dca81swwm50w1"]
 
 [ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="1_pegj0"]
+[ext_resource type="Texture2D" uid="uid://chkfpjpgfxgwg" path="res://screenshots/yarn.png" id="2_5mdla"]
 
 [resource]
 script = ExtResource("1_pegj0")
 item_name = "yarn"
 scene = "uid://bm2t271qk1qaa"
-components = Array[ExtResource("1_pegj0")]([])
+item_picture = ExtResource("2_5mdla")
 metadata/_custom_type_script = "uid://n5stvpcswml4"
