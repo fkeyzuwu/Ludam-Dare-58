@@ -34,7 +34,10 @@ func throw_garbage() -> void:
 		pos.z += randf_range(-0.3, 0.3)
 		garbage.global_position = pos
 		garbage.rotation_degrees.y = randf_range(0, 360)
-		garbage.picked_up.connect(func(_garbage: Garbage): throw_garbage())
+		for child in garbage.get_children():
+			if child is Garbage:
+				child.picked_up.connect(func(_garbage: Garbage): throw_garbage())
+				break
 
 func get_interaction_text() -> String:
 	return "Press 'E' to talk to " + data.neighbour_name
