@@ -134,29 +134,17 @@ transform = Transform3D(0.01, 0, 0, 0, 4.440892e-18, 0.01, 0, -0.01, 4.440892e-1
 [node name="Object_5" type="Node3D" parent="GarbageBags1/Models/Plastic_Bag_Dirt_02"]
 transform = Transform3D(1, 0, 0, 0, 6.123234e-17, -1, 0, 1, 6.123234e-17, 12.675791, -17.96267, -22.948893)
 
-[node name="Plastic_Bag_Dirt_02_Plastic_Bag_Dirt_0" type="MeshInstance3D" parent="GarbageBags1/Models/Plastic_Bag_Dirt_02/Object_5"]
-mesh = SubResource("ArrayMesh_2xcf3")
-skeleton = NodePath("")
-
 [node name="Plastic_Bag_Dirt_01" type="Node3D" parent="GarbageBags1/Models"]
 transform = Transform3D(0.0077341036, -0.0063390564, 0, 2.8151066e-18, 3.434632e-18, 0.01, -0.0063390564, -0.0077341036, 4.440892e-18, 0.15219438, 0.1640527, 0.11209442)
 
 [node name="Object_8" type="Node3D" parent="GarbageBags1/Models/Plastic_Bag_Dirt_01"]
 transform = Transform3D(1, 0, 0, 0, 6.123234e-17, -1, 0, 1, 6.123234e-17, -46.76388, -17.237736, -18.987123)
 
-[node name="Plastic_Bag_Dirt_01_Plastic_Bag_Dirt_0" type="MeshInstance3D" parent="GarbageBags1/Models/Plastic_Bag_Dirt_01/Object_8"]
-mesh = SubResource("ArrayMesh_cb5r8")
-skeleton = NodePath("")
-
 [node name="Plastic_Bag_Dirt_03" type="Node3D" parent="GarbageBags1/Models"]
 transform = Transform3D(0.0081294635, -0.0058233854, 0, 2.5861026e-18, 3.610207e-18, 0.01, -0.0058233854, -0.0081294635, 4.440892e-18, -0.22332925, 0.22469197, 0.14901763)
 
 [node name="Object_11" type="Node3D" parent="GarbageBags1/Models/Plastic_Bag_Dirt_03"]
 transform = Transform3D(1, 0, 0, 0, 6.123234e-17, -1, 0, 1, 6.123234e-17, 74.710556, -17.892715, -25.051054)
-
-[node name="Plastic_Bag_Dirt_03_Plastic_Bag_Dirt_0" type="MeshInstance3D" parent="GarbageBags1/Models/Plastic_Bag_Dirt_03/Object_11"]
-mesh = SubResource("ArrayMesh_6125x")
-skeleton = NodePath("")
 
 [node name="Plastic_Bag_Dirt_04" type="Node3D" parent="GarbageBags1/Models"]
 transform = Transform3D(0.0057357633, -0.0081915185, -3.5806266e-10, 0, -4.371138e-10, 0.009999998, -0.0081915185, -0.0057357633, -2.507182e-10, 0.12398477, 0.40110865, -0.165128)
