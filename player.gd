@@ -68,7 +68,7 @@ func _input(event: InputEvent) -> void:
 			enter_state(State.Idle)
 	elif event.is_action_pressed(&"change_mouse_mode"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED else Input.MOUSE_MODE_CAPTURED
-	elif event.is_action_pressed("quit"):
+	elif event.is_action_pressed("quit") and Engine.is_editor_hint():
 		get_tree().quit()
 
 func _physics_process(delta: float) -> void:

@@ -88,11 +88,11 @@ func interact(player: Player) -> void:
 			await get_tree().create_timer(5.0).timeout
 			player.hud.dialogue_box.show_dialogue_box("tuni", 
 			[
-				"mmmm.. it's getting dark outside.",
-				"i think it's time for me to rest. i helped a lot of people today.",
+				"mmmm.. it's getting dark outside. seems like everyone went to sleep.",
+				"i think it's time for me to go as well. a small possum needs some rest too.",
+				"i helped a lot of people today. i feel.. satisfied.",
+				"good night, tuni."
 			]
 			)
-			await tween.finished
-			player.hud.show_thanks_for_playing_label()
-		
-		
+			await player.hud.dialogue_box.closed
+			player.hud.fade_out()
