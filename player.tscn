@@ -93,3 +93,8 @@ color = Color(1, 1, 1, 0)
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("3_i3pqv")
+
+[node name="FootstepTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]

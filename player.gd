@@ -13,6 +13,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @export var inventory: PlayerInventory
 @onready var spawn_pos := global_position
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var footstep_timer: Timer = $FootstepTimer
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -26,6 +27,7 @@ enum State {
 }
 
 var state := State.Idle
+var is_walking := false
 
 func _exit_current_state() -> void:
 	match state:
@@ -90,7 +92,16 @@ func move(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+	
+	if not is_walking and velocity.length() >= 0.1:
+		is_walking = true
+		AudioManager.footstep_player.play()
+		footstep_timer.start()
+		
+	elif is_walking and velocity.length() <= 0.1:
+		is_walking = false
+		footstep_timer.stop()
+	
 	move_and_slide()
 
 func try_interact() -> void:
@@ -118,3 +129,6 @@ func kill() -> void:
 	global_position = spawn_pos
 	animation_player.play(&"respawn")
 	move_and_slide()
+
+func _on_footstep_timer_timeout() -> void:
+	AudioManager.footstep_player.play()
