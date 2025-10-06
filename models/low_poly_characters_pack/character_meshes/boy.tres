@@ -5,7 +5,6 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6chjh"]
 resource_name = "material"
 cull_mode = 2
-shading_mode = 0
 albedo_color = Color(0.7372549, 0.5568628, 1, 1)
 albedo_texture = ExtResource("1_j4ne6")
 

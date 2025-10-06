@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://u5t5oyvnpfha"]
+[gd_scene load_steps=5 format=3 uid="uid://u5t5oyvnpfha"]
 
 [ext_resource type="PackedScene" uid="uid://cxy5gn63knqcs" path="res://house.tscn" id="1_io773"]
 [ext_resource type="PackedScene" uid="uid://clrh3ocbmgoc1" path="res://tree.tscn" id="2_mslg3"]
 [ext_resource type="PackedScene" uid="uid://du0qiun2r16ii" path="res://ground.tscn" id="2_q1262"]
+[ext_resource type="PackedScene" uid="uid://cpbnquwmel7rd" path="res://lightpost.tscn" id="4_h0vyc"]
 
 [node name="Neighbourhood" type="Node3D"]
 
@@ -25,6 +26,30 @@ transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0,
 transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, -13.782192, 2.2956848, -11.582795)
 
 [node name="Ground" parent="." instance=ExtResource("2_q1262")]
+
+[node name="Lightpost" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.458179, 2.3386762, 4.626157)
+
+[node name="Lightpost2" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.458179, 2.3386762, -4.459943)
+
+[node name="Lightpost3" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420029, 2.3386762, 4.626157)
+
+[node name="Lightpost4" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420029, 2.3386762, -4.459943)
+
+[node name="Lightpost5" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420029, 2.3386762, 4.626157)
+
+[node name="Lightpost7" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420029, 2.3386762, 16.015572)
+
+[node name="Lightpost8" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.337183, 2.3386762, 16.015572)
+
+[node name="Lightpost6" parent="." instance=ExtResource("4_h0vyc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.420029, 2.3386762, -4.459943)
 
 [node name="Tree" parent="." instance=ExtResource("2_mslg3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.055472, -0.44597697, 5.2458506)

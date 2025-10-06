@@ -7,6 +7,7 @@
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pyc5x"]
 sky_top_color = Color(0.6156863, 0.23921569, 0.019607844, 1)
 sky_horizon_color = Color(0.9932105, 0.5651081, 0.38152567, 1)
+sky_curve = 0.1218379
 ground_bottom_color = Color(0.03137255, 0.24705882, 0.15294118, 1)
 
 [sub_resource type="Sky" id="Sky_1xprj"]
@@ -16,13 +17,21 @@ sky_material = SubResource("ProceduralSkyMaterial_pyc5x")
 background_mode = 2
 background_energy_multiplier = 0.61
 sky = SubResource("Sky_1xprj")
-tonemap_mode = 2
+ambient_light_source = 2
+ambient_light_color = Color(0.7917165, 0.4244633, 0.20200789, 1)
+ambient_light_sky_contribution = 0.41
+ambient_light_energy = 0.1
+tonemap_mode = 3
+tonemap_exposure = 1.26
+fog_enabled = true
+fog_light_color = Color(0.8064271, 0.43901905, 0.18362907, 1)
+fog_light_energy = 0.29
 
 [node name="World" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-light_color = Color(0.9747359, 0.32690358, 5.7756904e-07, 1)
+light_color = Color(1, 0.7698458, 0.69710654, 1)
 light_energy = 0.05
 shadow_enabled = true
 
@@ -38,4 +47,4 @@ mouse_sensitivity = 0.27
 transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, 148.11876, 5.784172, 0.38072824)
 
 [node name="NeighbourhoodFull" parent="." instance=ExtResource("5_dwbse")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.004486084, -0.008775234, 0.0010626316)
