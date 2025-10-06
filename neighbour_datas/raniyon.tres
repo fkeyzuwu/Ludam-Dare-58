@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="NeighbourData" load_steps=8 format=3 uid="uid://dg4m3dyid35vb"]
+
+[ext_resource type="Script" uid="uid://cqsko10jgjknc" path="res://neighbour_data/dialogue_data.gd" id="1_te0un"]
+[ext_resource type="Resource" uid="uid://k5qpmbo53gq6" path="res://neighbour_data/neighbour_mesh_data/santa.tres" id="2_te0un"]
+[ext_resource type="Script" uid="uid://loqagcwsc03f" path="res://neighbour_data/neighbour_data.gd" id="3_r3142"]
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="4_1btsn"]
+[ext_resource type="Resource" uid="uid://cjg53frxpektv" path="res://items/green_snot.tres" id="5_vicye"]
+[ext_resource type="Resource" uid="uid://d0rxbv7x6l1g" path="res://items/soup.tres" id="6_yq4kh"]
+
+[sub_resource type="Resource" id="Resource_khd7c"]
+script = ExtResource("1_te0un")
+initial_dialogue = Array[String](["oh man.. i don't feel so well.", "any chance you have something to help me out?"])
+accept_dialogue = Array[String](["oh! that is pretty hot and soupy.", "gracias little possum man!"])
+decline_dialogue = Array[String](["umm.. this doesn't seem like it would help."])
+metadata/_custom_type_script = "uid://cqsko10jgjknc"
+
+[resource]
+script = ExtResource("3_r3142")
+mesh_data = ExtResource("2_te0un")
+neighbour_name = "raniyon"
+color = Color(0.56804997, 0.7359831, 0.5625827, 1)
+throw_objects = Array[ExtResource("4_1btsn")]([ExtResource("5_vicye")])
+wanted_items = Array[ExtResource("4_1btsn")]([ExtResource("6_yq4kh")])
+dialogues = Array[ExtResource("1_te0un")]([SubResource("Resource_khd7c")])
+metadata/_custom_type_script = "uid://loqagcwsc03f"

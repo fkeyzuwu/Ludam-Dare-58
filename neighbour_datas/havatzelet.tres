@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="NeighbourData" load_steps=8 format=3 uid="uid://crblwdrqn6j3t"]
+
+[ext_resource type="Script" uid="uid://cqsko10jgjknc" path="res://neighbour_data/dialogue_data.gd" id="1_gwod7"]
+[ext_resource type="Resource" uid="uid://c8ex3tht24utv" path="res://neighbour_data/neighbour_mesh_data/girl.tres" id="2_3b6bd"]
+[ext_resource type="Script" uid="uid://loqagcwsc03f" path="res://neighbour_data/neighbour_data.gd" id="3_oytnc"]
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="4_6i2y3"]
+[ext_resource type="Resource" uid="uid://s5mfujuxjqhs" path="res://items/saw.tres" id="5_dnuou"]
+[ext_resource type="Resource" uid="uid://dca81swwm50w1" path="res://items/yarn.tres" id="6_wkfw0"]
+
+[sub_resource type="Resource" id="Resource_sxko6"]
+script = ExtResource("1_gwod7")
+initial_dialogue = Array[String](["mewo"])
+accept_dialogue = Array[String](["mewo mewo!! :3"])
+decline_dialogue = Array[String](["mewo :("])
+metadata/_custom_type_script = "uid://cqsko10jgjknc"
+
+[resource]
+script = ExtResource("3_oytnc")
+mesh_data = ExtResource("2_3b6bd")
+neighbour_name = "havatzelet"
+throw_objects = Array[ExtResource("4_6i2y3")]([ExtResource("5_dnuou")])
+wanted_items = Array[ExtResource("4_6i2y3")]([ExtResource("6_wkfw0")])
+dialogues = Array[ExtResource("1_gwod7")]([SubResource("Resource_sxko6")])
+metadata/_custom_type_script = "uid://loqagcwsc03f"

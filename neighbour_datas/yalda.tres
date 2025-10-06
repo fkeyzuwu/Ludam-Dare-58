@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="NeighbourData" load_steps=6 format=3 uid="uid://bu8ppq6ii04lx"]
+
+[ext_resource type="Script" uid="uid://cqsko10jgjknc" path="res://neighbour_data/dialogue_data.gd" id="1_shcmj"]
+[ext_resource type="Resource" uid="uid://c8ex3tht24utv" path="res://neighbour_data/neighbour_mesh_data/girl.tres" id="2_fdmw3"]
+[ext_resource type="Script" uid="uid://loqagcwsc03f" path="res://neighbour_data/neighbour_data.gd" id="3_t21ex"]
+[ext_resource type="Script" uid="uid://n5stvpcswml4" path="res://item.gd" id="4_oga80"]
+[ext_resource type="Resource" uid="uid://cj8ne57cqnpcm" path="res://items/veggies.tres" id="5_spito"]
+
+[resource]
+script = ExtResource("3_t21ex")
+mesh_data = ExtResource("2_fdmw3")
+neighbour_name = "yalda"
+throw_objects = Array[ExtResource("4_oga80")]([ExtResource("5_spito")])
+dialogues = Array[ExtResource("1_shcmj")]([])
+metadata/_custom_type_script = "uid://loqagcwsc03f"
