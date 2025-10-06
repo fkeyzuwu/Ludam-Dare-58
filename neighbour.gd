@@ -14,7 +14,6 @@ func _ready() -> void:
 	
 	name = data.neighbour_name
 	hide_neighbour()
-	await get_tree().create_timer(1.0).timeout
 	throw_garbage()
 	
 func show_neighbour() -> void:
@@ -24,6 +23,7 @@ func hide_neighbour() -> void:
 	mesh_instance.visible = false
 	
 func throw_garbage() -> void:
+	await get_tree().create_timer(randf_range(5.0, 30.0)).timeout
 	var garabge_item = data.throw_objects.pop_front() as Item
 	if garabge_item:
 		var item_scene: PackedScene = load(garabge_item.scene)
@@ -34,6 +34,7 @@ func throw_garbage() -> void:
 		pos.z += randf_range(-0.3, 0.3)
 		garbage.global_position = pos
 		garbage.rotation_degrees.y = randf_range(0, 360)
+		garbage.picked_up.connect(func(_garbage: Garbage): throw_garbage())
 
 func get_interaction_text() -> String:
 	return "Press 'E' to talk to " + data.neighbour_name
