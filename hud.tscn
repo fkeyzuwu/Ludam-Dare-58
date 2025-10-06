@@ -36,17 +36,14 @@ crafter = NodePath("Crafter")
 
 [node name="DialogueBox" type="Panel" parent="." node_paths=PackedStringArray("screen_blocker")]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -372.5
-offset_top = -247.0
-offset_right = 379.5
-offset_bottom = -97.0
+offset_left = -376.0
+offset_top = 35.805
+offset_right = 376.0
+offset_bottom = 185.805
 grow_horizontal = 2
-grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8sq4i")
 script = ExtResource("2_64ctp")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cf8i63x344oty"]
+[gd_scene load_steps=14 format=3 uid="uid://cf8i63x344oty"]
 
 [ext_resource type="Script" uid="uid://dfvx7dv8wgfvk" path="res://neighbour.gd" id="1_burpp"]
 [ext_resource type="Script" uid="uid://loqagcwsc03f" path="res://neighbour_data/neighbour_data.gd" id="2_6cscy"]
@@ -29,6 +29,67 @@ metadata/_custom_type_script = "uid://loqagcwsc03f"
 [sub_resource type="BoxShape3D" id="BoxShape3D_hsk1u"]
 size = Vector3(1.365, 2.487, 1.136121)
 
+[sub_resource type="Animation" id="Animation_b63ib"]
+resource_name = "bob_tween"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0), Vector3(-1.5707964, 0, 0), Vector3(-1.5707964, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0.12, 0.12, 0.12), Vector3(0.12, 0.12, 0.125), Vector3(0.12, 0.12, 0.12)]
+}
+
+[sub_resource type="Animation" id="Animation_4rqn0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.12, 0.12, 0.12)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4rqn0"]
+_data = {
+&"RESET": SubResource("Animation_4rqn0"),
+&"bob_tween": SubResource("Animation_b63ib")
+}
+
 [node name="Neighbour" type="StaticBody3D" node_paths=PackedStringArray("mesh_instance", "collision_shape")]
 collision_layer = 132
 script = ExtResource("1_burpp")
@@ -43,3 +104,9 @@ mesh = ExtResource("2_burpp")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2905273, -0.05992621)
 shape = SubResource("BoxShape3D_hsk1u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4rqn0")
+}
+autoplay = "bob_tween"
