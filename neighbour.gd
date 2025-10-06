@@ -7,12 +7,18 @@ class_name Neighbour extends StaticBody3D
 var garbage_can: GarbageCan
 var initial_interaction := false
 
+static var neighbours_to_finish: int = 0
+
 func _ready() -> void:
 	mesh_instance.mesh = data.mesh_data.mesh.duplicate(true)
 	mesh_instance.position.x = data.mesh_data.offset
 	mesh_instance.mesh.surface_get_material(0).albedo_color = data.color
 	
 	name = data.neighbour_name
+	
+	if not data.wanted_items.is_empty():
+		neighbours_to_finish += 1
+	
 	hide_neighbour()
 	throw_garbage()
 	
@@ -71,6 +77,9 @@ func interact(player: Player) -> void:
 		
 	await player.hud.dialogue_box.closed
 	hide_neighbour()
+	
+	if data.wanted_items.is_empty():
+		neighbours_to_finish -= 1
 		
-func finish_interaction() -> void:
-	pass
+		if neighbours_to_finish == 0:
+			print("YOU WIN")
