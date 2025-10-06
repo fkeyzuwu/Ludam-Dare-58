@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgx0wm4blsplr"]
+[gd_scene load_steps=23 format=3 uid="uid://cgx0wm4blsplr"]
 
 [ext_resource type="Script" uid="uid://bv0k3gouw1skn" path="res://audio_manager.gd" id="1_jisk1"]
 [ext_resource type="AudioStream" uid="uid://jtk0gnuonevt" path="res://audio/sfx/garbage_pickup/garbage_pickup1.wav" id="2_5olve"]
@@ -8,6 +8,14 @@
 [ext_resource type="AudioStream" uid="uid://ba2jwi23i3lw0" path="res://audio/sfx/close_dialogue.wav" id="6_l2k84"]
 [ext_resource type="AudioStream" uid="uid://htxtpsu8gqfx" path="res://audio/sfx/open dialogue.wav" id="6_l55mp"]
 [ext_resource type="AudioStream" uid="uid://yfp7e27d0fy6" path="res://audio/sfx/continue dialogue.wav" id="6_v0gdi"]
+[ext_resource type="AudioStream" uid="uid://bn7n3locg25x1" path="res://audio/sfx/footsteps/footstep1.wav" id="9_mfnxe"]
+[ext_resource type="AudioStream" uid="uid://ddac6ej2suysk" path="res://audio/sfx/footsteps/footstep2.wav" id="10_astvc"]
+[ext_resource type="AudioStream" uid="uid://b5h0f26ut642b" path="res://audio/sfx/footsteps/footstep3.wav" id="11_ma34g"]
+[ext_resource type="AudioStream" uid="uid://d8yk3bsn8vrj" path="res://audio/sfx/footsteps/footstep4.wav" id="12_hokuy"]
+[ext_resource type="AudioStream" uid="uid://j0f43oni36l3" path="res://audio/sfx/footsteps/footstep5.wav" id="13_alxyf"]
+[ext_resource type="AudioStream" uid="uid://2sjykvr8g8tq" path="res://audio/sfx/footsteps/footstep6.wav" id="14_n8htm"]
+[ext_resource type="AudioStream" uid="uid://did1rilivxxyt" path="res://audio/sfx/footsteps/footstep7.wav" id="15_jkoco"]
+[ext_resource type="AudioStream" uid="uid://dfpvvxm6ekbcy" path="res://audio/sfx/footsteps/footstep8.wav" id="16_wcghe"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_67dqc"]
 random_pitch = 1.1
@@ -40,6 +48,19 @@ random_volume_offset_db = 0.3
 streams_count = 1
 stream_0/stream = ExtResource("6_l2k84")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v0gdi"]
+random_pitch = 1.1
+random_volume_offset_db = 1.0
+streams_count = 8
+stream_0/stream = ExtResource("9_mfnxe")
+stream_1/stream = ExtResource("10_astvc")
+stream_2/stream = ExtResource("11_ma34g")
+stream_3/stream = ExtResource("12_hokuy")
+stream_4/stream = ExtResource("13_alxyf")
+stream_5/stream = ExtResource("14_n8htm")
+stream_6/stream = ExtResource("15_jkoco")
+stream_7/stream = ExtResource("16_wcghe")
+
 [node name="AudioManager" type="Node3D"]
 script = ExtResource("1_jisk1")
 
@@ -62,3 +83,7 @@ volume_db = -12.0
 [node name="DialogueClosedSoundPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_l55mp")
 volume_db = -12.0
+
+[node name="FootstepPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_v0gdi")
+volume_db = -16.124
