@@ -8,7 +8,7 @@
 [resource]
 script = ExtResource("1_1j3ue")
 item_name = "chainsaw"
-description = "can probably cut stuff with it"
+description = "a chain-saw... get it?"
 scene = "uid://bpx5ivovmpo1e"
 components = Array[ExtResource("1_1j3ue")]([ExtResource("2_wn4f6"), ExtResource("3_rinyk")])
 item_picture = ExtResource("4_rinyk")

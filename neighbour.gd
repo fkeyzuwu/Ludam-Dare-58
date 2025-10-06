@@ -82,4 +82,17 @@ func interact(player: Player) -> void:
 		neighbours_to_finish -= 1
 		
 		if neighbours_to_finish == 0:
-			print("YOU WIN")
+			var env = get_world_3d().environment
+			var tween = create_tween()
+			tween.tween_property(env, ^"fog_light_color", Color("2b1203"), 15.0)
+			await get_tree().create_timer(5.0).timeout
+			player.hud.dialogue_box.show_dialogue_box("tuni", 
+			[
+				"mmmm.. it's getting dark outside.",
+				"i think it's time for me to rest. i helped a lot of people today.",
+			]
+			)
+			await tween.finished
+			player.hud.show_thanks_for_playing_label()
+		
+		

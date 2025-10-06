@@ -4,6 +4,7 @@ class_name HUD extends Control
 @onready var dialogue_box: DialogueBox = $DialogueBox
 @onready var inventory_container: HBoxContainer = $Inventory
 @export var crafter: Crafter
+@onready var thanks_for_playing_label: Label = $ThanksForPlayingLabel
 
 func _ready() -> void:
 	dialogue_box.hide_dialogue_box()
@@ -13,3 +14,6 @@ func show_interaction_text(text: String) -> void:
 
 func hide_interaction_text() -> void:
 	interaction_label.text = ""
+
+func show_thanks_for_playing_label() -> void:
+	thanks_for_playing_label.visible = true
