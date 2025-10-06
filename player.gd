@@ -132,3 +132,7 @@ func kill() -> void:
 
 func _on_footstep_timer_timeout() -> void:
 	AudioManager.footstep_player.play()
+
+func _on_death_boundary_body_entered(body: Node3D) -> void:
+	if body is Player:
+		kill()

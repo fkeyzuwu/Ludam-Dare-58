@@ -27,6 +27,10 @@ enabled=PackedStringArray()
 
 garbage_truck=""
 
+[godot_resource_groups]
+
+auto_rebuild=true
+
 [input]
 
 jump={
@@ -90,6 +94,7 @@ mouse_left={
 3d_physics/layer_6="GarbageTruck"
 3d_physics/layer_7="GarbageTruckResetArea"
 3d_physics/layer_8="Neighbour"
+3d_physics/layer_9="DeathBoundary"
 
 [physics]
 
