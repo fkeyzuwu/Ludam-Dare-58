@@ -124,7 +124,7 @@ shadow_mesh = SubResource("ArrayMesh_2dbyg")
 
 [node name="Coffee" type="RigidBody3D"]
 collision_layer = 8
-collision_mask = 16
+collision_mask = 18
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02157271, 0.27885872, -0.001663208)

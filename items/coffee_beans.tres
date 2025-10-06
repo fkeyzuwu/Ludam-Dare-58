@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_4vlv1")
 item_name = "coffee_beans"
+scene = "uid://dww3dlqdv6krn"
 item_picture = ExtResource("2_mrm5c")
 metadata/_custom_type_script = "uid://n5stvpcswml4"

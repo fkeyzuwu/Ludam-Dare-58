@@ -122,7 +122,7 @@ height = 1.4373169
 
 [node name="Lizard" type="RigidBody3D"]
 collision_layer = 8
-collision_mask = 16
+collision_mask = 18
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.725, 0, 0, 0, 0.725, -1.6098234e-16, 0, 1.6098234e-16, 0.725, 0, 0, 0)

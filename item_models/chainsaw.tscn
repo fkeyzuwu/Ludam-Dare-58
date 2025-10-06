@@ -207,7 +207,7 @@ height = 2.8
 
 [node name="Chainsaw" type="RigidBody3D"]
 collision_layer = 8
-collision_mask = 16
+collision_mask = 18
 
 [node name="Model" type="Node3D" parent="."]
 transform = Transform3D(0.27, 0, 0, 0, -1.1802075e-08, 0.27, 0, -0.27, -1.1802075e-08, 0, 0, 0.66246516)
