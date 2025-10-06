@@ -11,7 +11,7 @@
 script = ExtResource("1_te0un")
 initial_dialogue = Array[String](["oh man.. i don't feel so well.", "any chance you have something to help me out?"])
 accept_dialogue = Array[String](["oh! that is pretty hot and soupy.", "gracias little possum man!"])
-decline_dialogue = Array[String](["umm.. this doesn't seem like it would help."])
+decline_dialogue = Array[String](["*cough cough* uhh.. this doesn't seem like it would help."])
 metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
 [resource]

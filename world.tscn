@@ -47,4 +47,4 @@ mouse_sensitivity = 0.27
 transform = Transform3D(0.010541557, 0, -0.99994445, 0, 1, 0, 0.99994445, 0, 0.010541557, 148.11876, 5.784172, 0.38072824)
 
 [node name="NeighbourhoodFull" parent="." instance=ExtResource("5_dwbse")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.004486084, -0.008775234, 0.0010626316)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
