@@ -1,6 +1,7 @@
-[gd_scene load_steps=33 format=4 uid="uid://dwed38g7s810u"]
+[gd_scene load_steps=34 format=4 uid="uid://dwed38g7s810u"]
 
 [ext_resource type="Script" uid="uid://xea5bx6damhg" path="res://garbage_truck.gd" id="1_2ixbb"]
+[ext_resource type="AudioStream" uid="uid://xa7d3up2eibl" path="res://audio/sfx/garbage_truck.wav" id="2_tbp23"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vek1g"]
 resource_name = "MainBody"
@@ -453,7 +454,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051376343, -1.1755619, 2.5
 shape = SubResource("BoxShape3D_5ok6a")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_tbp23")
+volume_db = -14.359
+unit_size = 6.13
 autoplay = true
+attenuation_filter_db = -32.6
+doppler_tracking = 2
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
