@@ -25,5 +25,7 @@ func _on_inventory_item_pressed(inventory_item: InventoryItem) -> void:
 	if not inventory_item.in_crafting:
 		if crafter.inventory_items.size() < 2:
 			crafter.push_inventory_item(inventory_item)
+			AudioManager.dialogue_continue_sound_player.play()
 	else:
 		crafter.return_inventory_item(inventory_item)
+		AudioManager.dialogue_continue_sound_player.play()

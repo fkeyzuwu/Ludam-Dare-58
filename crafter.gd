@@ -13,7 +13,6 @@ var label_tween: Tween
 
 func _ready() -> void:
 	incorrect_recepie_label.modulate.a = 0.0
-	hide_crafter()
 	craft_button.disabled = true
 	
 	await get_tree().process_frame
@@ -23,9 +22,11 @@ func _ready() -> void:
 	
 func show_crafter() -> void:
 	show()
+	AudioManager.dialogue_open_sound_player.play()
 
 func hide_crafter() -> void:
 	hide()
+	AudioManager.dialogue_closed_sound_player.play()
 
 func _on_craft_button_pressed() -> void:
 	if inventory_items.size() == 2:

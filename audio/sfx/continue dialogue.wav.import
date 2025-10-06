@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://yfp7e27d0fy6"
+path="res://.godot/imported/continue dialogue.wav-0fed15df96af3450c21baa82eb418926.sample"
+
+[deps]
+
+source_file="res://audio/sfx/continue dialogue.wav"
+dest_files=["res://.godot/imported/continue dialogue.wav-0fed15df96af3450c21baa82eb418926.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

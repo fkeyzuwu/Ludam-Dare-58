@@ -8,7 +8,6 @@ class_name HUD extends Control
 @onready var fade: ColorRect = $Fade
 
 func _ready() -> void:
-	dialogue_box.hide_dialogue_box()
 	fade_in()
 
 func fade_in() -> void:

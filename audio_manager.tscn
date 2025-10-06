@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=3 uid="uid://cgx0wm4blsplr"]
+
+[ext_resource type="Script" uid="uid://bv0k3gouw1skn" path="res://audio_manager.gd" id="1_jisk1"]
+[ext_resource type="AudioStream" uid="uid://jtk0gnuonevt" path="res://audio/sfx/garbage_pickup/garbage_pickup1.wav" id="2_5olve"]
+[ext_resource type="AudioStream" uid="uid://dp335damum5p2" path="res://audio/sfx/garbage_pickup/garbage_pickup2.wav" id="3_nhx87"]
+[ext_resource type="AudioStream" uid="uid://cr2yr4u46gmjn" path="res://audio/sfx/garbage_pickup/garbage_pickup3.wav" id="4_l2k84"]
+[ext_resource type="AudioStream" uid="uid://cryibo3jewlgj" path="res://audio/sfx/crafted_item.wav" id="5_nhx87"]
+[ext_resource type="AudioStream" uid="uid://ba2jwi23i3lw0" path="res://audio/sfx/close_dialogue.wav" id="6_l2k84"]
+[ext_resource type="AudioStream" uid="uid://htxtpsu8gqfx" path="res://audio/sfx/open dialogue.wav" id="6_l55mp"]
+[ext_resource type="AudioStream" uid="uid://yfp7e27d0fy6" path="res://audio/sfx/continue dialogue.wav" id="6_v0gdi"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_67dqc"]
+random_pitch = 1.1
+random_volume_offset_db = 0.5
+streams_count = 3
+stream_0/stream = ExtResource("2_5olve")
+stream_1/stream = ExtResource("3_nhx87")
+stream_2/stream = ExtResource("4_l2k84")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5olve"]
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("5_nhx87")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nhx87"]
+random_pitch = 1.1
+random_volume_offset_db = 0.3
+streams_count = 1
+stream_0/stream = ExtResource("6_v0gdi")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l2k84"]
+random_pitch = 1.1
+random_volume_offset_db = 0.3
+streams_count = 1
+stream_0/stream = ExtResource("6_l55mp")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l55mp"]
+random_pitch = 1.1
+random_volume_offset_db = 0.3
+streams_count = 1
+stream_0/stream = ExtResource("6_l2k84")
+
+[node name="AudioManager" type="Node3D"]
+script = ExtResource("1_jisk1")
+
+[node name="GarbageSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_67dqc")
+volume_db = -8.822
+
+[node name="CraftedItemSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_5olve")
+volume_db = -10.5
+
+[node name="DialogueContinueSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_nhx87")
+max_polyphony = 4
+
+[node name="DialogueOpenSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_l2k84")
+volume_db = -12.0
+
+[node name="DialogueClosedSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_l55mp")
+volume_db = -12.0

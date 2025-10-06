@@ -43,6 +43,7 @@ func craft_item(components: Array[Item]) -> void:
 			remove(component)
 			
 		add_item(new_item)
+		AudioManager.play_crafted_item_sound()
 	elif item_recipies.has(components2):
 		var new_item = item_recipies[components2] as Item
 		dialogue_box.show_dialogue_box("tuni", [new_item.description])
@@ -50,5 +51,6 @@ func craft_item(components: Array[Item]) -> void:
 			remove(component)
 			
 		add_item(new_item)
+		AudioManager.play_crafted_item_sound()
 	else:
 		crafter.show_incorrect_recipie_text()
