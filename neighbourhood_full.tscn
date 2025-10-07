@@ -62,8 +62,8 @@ metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
 [sub_resource type="Resource" id="Resource_7avjl"]
 script = ExtResource("2_u382n")
-initial_dialogue = Array[String](["can you get me that knife? to kill people and shit"])
-accept_dialogue = Array[String](["i love knife!"])
+initial_dialogue = Array[String](["can you get me that knife across the street?? so i can kill people and stuff?"])
+accept_dialogue = Array[String](["geeweez tuni! thanks! i love knife!"])
 decline_dialogue = Array[String](["knifing is my speciality."])
 metadata/_custom_type_script = "uid://cqsko10jgjknc"
 
